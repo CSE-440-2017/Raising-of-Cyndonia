@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 8f189226ee665544a8818614c3c6bce4
-timeCreated: 1510134969
-licenseType: Free
+timeCreated: 1510262869
+licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
     21300000: cave entrance 1
@@ -254,8 +254,8 @@ TextureImporter:
     21300494: purple_caves_01_tilesheet_v2_247
     21300496: purple_caves_edge_right_top
     21300498: purple_caves_01_tilesheet_v2_249
-    21300500: purple_caves_top_wall_1
-    21300502: purple_caves_top_wall_2
+    21300500: purple_caves_top_wall_11
+    21300502: purple_caves_top_wall_21
     21300504: purple_caves_01_tilesheet_v2_252
     21300506: purple_caves_01_tilesheet_v2_253
     21300508: purple_caves_01_tilesheet_v2_254
@@ -286,8 +286,8 @@ TextureImporter:
     21300558: purple_caves_01_tilesheet_v2_279
     21300560: purple_caves_edge_right_1
     21300562: purple_caves_01_tilesheet_v2_281
-    21300564: purple_caves_top_wall_3
-    21300566: purple_caves_top_wall_4
+    21300564: purple_caves_top_wall_12
+    21300566: purple_caves_top_wall_22
     21300568: purple_caves_01_tilesheet_v2_284
     21300570: purple_caves_01_tilesheet_v2_285
     21300572: purple_caves_01_tilesheet_v2_286
@@ -314,8 +314,8 @@ TextureImporter:
     21300614: purple_caves_01_tilesheet_v2_307
     21300616: purple_caves_edge_right_2
     21300618: purple_caves_01_tilesheet_v2_309
-    21300620: purple_caves_01_tilesheet_v2_310
-    21300622: purple_caves_01_tilesheet_v2_311
+    21300620: purple_caves_top_wall_13
+    21300622: purple_caves_top_wall_23
     21300624: purple_caves_01_tilesheet_v2_312
     21300626: purple_caves_01_tilesheet_v2_313
     21300628: purple_caves_01_tilesheet_v2_314
@@ -342,8 +342,8 @@ TextureImporter:
     21300670: purple_caves_01_tilesheet_v2_335
     21300672: purple_caves_edge_right_3
     21300674: purple_caves_01_tilesheet_v2_337
-    21300676: purple_caves_01_tilesheet_v2_338
-    21300678: purple_caves_01_tilesheet_v2_339
+    21300676: purple_caves_top_wall_14
+    21300678: purple_caves_top_wall_24
     21300680: purple_caves_01_tilesheet_v2_340
     21300682: purple_caves_01_tilesheet_v2_341
     21300684: purple_caves_01_tilesheet_v2_342
@@ -746,6 +746,7 @@ TextureImporter:
     21301478: purple_caves_01_tilesheet_v2_739
     21301480: purple_caves_01_tilesheet_v2_740
     21301482: purple_caves_01_tilesheet_v2_741
+    21301484: purple_caves_01_tilesheet_v2_0
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -1220,7 +1221,7 @@ TextureImporter:
       name: cave entrance 3
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 480
         width: 16
         height: 16
@@ -4325,7 +4326,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: purple_caves_top_wall_1
+      name: purple_caves_top_wall_11
       rect:
         serializedVersion: 2
         x: 416
@@ -4339,7 +4340,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: purple_caves_top_wall_2
+      name: purple_caves_top_wall_21
       rect:
         serializedVersion: 2
         x: 432
@@ -4773,7 +4774,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: purple_caves_top_wall_3
+      name: purple_caves_top_wall_12
       rect:
         serializedVersion: 2
         x: 416
@@ -4787,7 +4788,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: purple_caves_top_wall_4
+      name: purple_caves_top_wall_22
       rect:
         serializedVersion: 2
         x: 432
@@ -5165,7 +5166,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: purple_caves_01_tilesheet_v2_310
+      name: purple_caves_top_wall_13
       rect:
         serializedVersion: 2
         x: 416
@@ -5179,7 +5180,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: purple_caves_01_tilesheet_v2_311
+      name: purple_caves_top_wall_23
       rect:
         serializedVersion: 2
         x: 432
@@ -5557,7 +5558,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: purple_caves_01_tilesheet_v2_338
+      name: purple_caves_top_wall_14
       rect:
         serializedVersion: 2
         x: 416
@@ -5571,7 +5572,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: purple_caves_01_tilesheet_v2_339
+      name: purple_caves_top_wall_24
       rect:
         serializedVersion: 2
         x: 432
@@ -11206,6 +11207,20 @@ TextureImporter:
         y: 32
         width: 16
         height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: purple_caves_01_tilesheet_v2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
