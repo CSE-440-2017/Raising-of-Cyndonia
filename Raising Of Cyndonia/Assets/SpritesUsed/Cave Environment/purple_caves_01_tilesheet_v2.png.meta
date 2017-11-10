@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 8f189226ee665544a8818614c3c6bce4
-timeCreated: 1510262869
-licenseType: Pro
+timeCreated: 1510276535
+licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: cave entrance 1
@@ -362,7 +362,7 @@ TextureImporter:
     21300710: purple_caves_01_tilesheet_v2_355
     21300712: purple_caves_01_tilesheet_v2_356
     21300714: purple_caves_01_tilesheet_v2_357
-    21300716: purple_caves_01_tilesheet_v2_358
+    21300716: purple_caves_01_edge_right_4
     21300718: purple_caves_edge_left_4
     21300720: purple_caves_01_tilesheet_v2_360
     21300722: purple_caves_01_tilesheet_v2_361
@@ -830,9 +830,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 448
-        width: 32
-        height: 64
+        y: 496
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5838,7 +5838,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: purple_caves_01_tilesheet_v2_358
+      name: purple_caves_01_edge_right_4
       rect:
         serializedVersion: 2
         x: 256
