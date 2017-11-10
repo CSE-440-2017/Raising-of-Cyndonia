@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Location : MonoBehaviour 
+public class EncounterInstance : MonoBehaviour 
 {
+	public LocationList Cave;
 
 	// Use this for initialization
-	void Start() 
+	void Start()
 	{
 		
 	}
@@ -16,9 +17,13 @@ public class Location : MonoBehaviour
 	{
 		
 	}
-}
 
-public enum LocationList
-{
-	Cave, Forest, Castle, Dungeon
+	void OnTriggerEnter2D(Collider2D col)
+	{
+		if (col.GetComponent<PlayerMove>()) 
+		{
+			
+		}
+	}
+
 }

@@ -8,6 +8,7 @@ public class EnemyEncounter : MonoBehaviour
 	public string name;
 	public Sprite image;
 	public LocationList locationIn;
+	public RandomEncounter encountChance;
 	Entity entInfo;
 
 	// Use this for initialization
