@@ -10,6 +10,7 @@ public class Entity : MonoBehaviour
 	[SerializeField] bool isDead, isPlayer, canAttack, inCombat, interactable, statusEffect, canRecruit, canRegen;
 	[SerializeField] int level, hitPoints, skillPoints, hitPointReg;
 	[SerializeField] int damage;
+	public RandomEncounter chanceEncounter;
 
 	// Update is called once per frame
 	void Update() 

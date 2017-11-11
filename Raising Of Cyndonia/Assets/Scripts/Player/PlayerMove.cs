@@ -8,6 +8,7 @@ public class PlayerMove : MonoBehaviour
 	Direction curDir; //current direction
 	Vector2 input; //input of the user
 	bool isMoving = false; //sets player moving as false
+	public bool inCombat = false;
 	Vector3 sPos, ePos; //start position and end position
 	float time; //time value
 
@@ -18,11 +19,16 @@ public class PlayerMove : MonoBehaviour
 	public Sprite wSprite;
 
 	public float speed = 0.5f;
+
+	void Start()
+	{
+		inCombat = false;
+	}
 	
 	// Update is called once per frame
 	void Update() 
 	{
-		if (!isMoving) 
+		if (!isMoving && !inCombat) 
 		{
 			//gets the wasd keys and such to allow player to move
 			input = new Vector2 (Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
