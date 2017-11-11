@@ -7,9 +7,9 @@ public class EnemyEncounter : MonoBehaviour
 {
 	public string name;
 	public Sprite image;
-	public LocationList locationIn;
-	public RandomEncounter encountChance;
-	Entity entInfo;
+	public LocationList locationIn; //location you are in
+	public RandomEncounter encountChance; //the chance you will encounter
+	Entity entInfo; //entity's stats
 
 	// Use this for initialization
 	void Start() 
@@ -24,6 +24,7 @@ public class EnemyEncounter : MonoBehaviour
 	}
 }
 
+//the chance you will encounter an enemy
 public enum RandomEncounter
 {
 	Common, Uncommon, Epic

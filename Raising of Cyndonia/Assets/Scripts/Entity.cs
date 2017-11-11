@@ -10,12 +10,26 @@ public class Entity : MonoBehaviour
 	[SerializeField] bool isDead, isPlayer, canAttack, inCombat, interactable, statusEffect, canRecruit, canRegen;
 	[SerializeField] int level, hitPoints, skillPoints, hitPointReg;
 	[SerializeField] int damage;
-	public RandomEncounter chanceEncounter;
+	[SerializeField] string name;
+	public Sprite image;
+
+	public RandomEncounter chanceEncounter; //chance that the enemy can be encountered
 
 	// Update is called once per frame
 	void Update() 
 	{
 
+	}
+
+	//for the temp object will copy all stats in prefab of that goblin pre set
+	public void AddMember(Entity ent)
+	{
+		this.name = ent.name;
+		this.image = ent.image;
+		this.chanceEncounter = ent.chanceEncounter;
+		this.level = ent.level;
+		this.damage = ent.damage;
+		this.hitPoints = ent.hitPoints;
 	}
 
 	public bool IsDead //checks if object is alive

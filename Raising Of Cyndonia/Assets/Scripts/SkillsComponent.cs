@@ -5,9 +5,9 @@ using UnityEngine;
 [System.Serializable]
 public class SkillsComponent : MonoBehaviour 
 {
-	Entity entStat;
-	public SkillType sType;
-	[SerializeField] string name;
+	Entity entStat; //gets the entity's stats
+	public SkillType sType; //determines the type of skill used
+	[SerializeField] string name; 
 
 
 	// Use this for initialization
@@ -23,6 +23,7 @@ public class SkillsComponent : MonoBehaviour
 	}
 }
 
+//allows for melee type, range type, and magic type of skills
 public enum SkillType
 {
 	Melee, Range, Magic

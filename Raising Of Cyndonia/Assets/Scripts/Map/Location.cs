@@ -18,6 +18,7 @@ public class Location : MonoBehaviour
 	}
 }
 
+//the locations that you can encounter enemies
 public enum LocationList
 {
 	Cave, Forest, Castle, Dungeon

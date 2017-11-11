@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour 
 {
-	public List<Entity> playerParty = new List<Entity>();
+	public List<PlayerParty> pParty = new List<PlayerParty>(); //list of the players party
 
 	// Use this for initialization
 	void Start() 
@@ -19,9 +19,10 @@ public class Player : MonoBehaviour
 	}
 }
 
+//players party and skills they have
 [System.Serializable]
 public class PlayerParty
 {
-	public Entity character;
-	public List<SkillsComponent> skills = new List<SkillsComponent>();
+	public Entity character; //the characters that are in the party
+	public List<SkillsComponent> skills = new List<SkillsComponent>(); //the skills that the party has
 }

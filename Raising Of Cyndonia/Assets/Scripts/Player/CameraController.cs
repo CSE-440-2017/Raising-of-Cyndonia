@@ -7,6 +7,7 @@ public class CameraController : MonoBehaviour
 	private GameObject player;
 	private Vector3 offset;
 
+	//sets camera to follow the player during exploration
 	void Awake()
 	{
 		player = GameObject.FindWithTag("Player");
