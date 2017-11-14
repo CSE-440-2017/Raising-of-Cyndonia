@@ -9,7 +9,7 @@ public class Entity : MonoBehaviour
 {
 	[SerializeField] bool isDead, isPlayer, canAttack, inCombat, interactable, statusEffect, canRecruit, canRegen;
 	[SerializeField] int level, hitPoints, skillPoints, hitPointReg;
-	[SerializeField] int damage;
+	[SerializeField] int regDamage, magDamage, specDamage;
 	[SerializeField] string name;
 	public Sprite image;
 
@@ -28,7 +28,9 @@ public class Entity : MonoBehaviour
 		this.image = ent.image;
 		this.chanceEncounter = ent.chanceEncounter;
 		this.level = ent.level;
-		this.damage = ent.damage;
+		this.regDamage = ent.regDamage;
+		this.magDamage = ent.magDamage;
+		this.specDamage = ent.specDamage;
 		this.hitPoints = ent.hitPoints;
 	}
 
@@ -92,8 +94,18 @@ public class Entity : MonoBehaviour
 		get { return hitPointReg; }
 	}
 
-	public float Damage //finds out the damage the object will do
+	public int RegDamage //finds out the damage the object will do
 	{
-		get { return damage; }
+		get { return regDamage; }
+	}
+
+	public int MagDamage 
+	{
+		get { return magDamage; }
+	}
+
+	public int SpecDamage 
+	{
+		get { return specDamage; }
 	}
 }
