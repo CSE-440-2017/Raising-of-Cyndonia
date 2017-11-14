@@ -43,7 +43,7 @@ public class EventManager : MonoBehaviour
 		tempEnt.AddMember(encounteredEnemies);
 		enPos.GetComponent<SpriteRenderer>().sprite = encounteredEnemies.image;
 
-		bUI.changePanel(PlayerMenu.Choice); //the change panels ui for battle based off of the choices input
+		//bUI.ChangePanel(PlayerMenu.Choice); //the change panels ui for battle based off of the choices input
 
 	}
 
