@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EventManager : MonoBehaviour 
 {
-	public GameObject exploreCamera, battleCamera, player, enPos, plPos, emptyPos; //sets up game objects
+	public GameObject exploreCamera, battleCamera, player, enPos, plPos, emptyPos1, emptyPos2; //sets up game objects
 	public List<Entity> allEnemies = new List<Entity>(); //creates a list of enemies
 	public List<SkillsComponent> allSkills = new List<SkillsComponent>(); //creates a list of skills
 	Entity tempEnt; //temp game object was using to switch goblins and mess with
@@ -36,7 +36,7 @@ public class EventManager : MonoBehaviour
 
 		player.GetComponent<PlayerMove>().inCombat = true; //makes it so player cant move in combat
 
-		enPos = Instantiate(emptyPos, enemyBPosition[0].transform.position, Quaternion.identity) as GameObject; //places enemy in position 2
+		enPos = Instantiate(emptyPos1, enemyBPosition[0].transform.position, Quaternion.identity) as GameObject; //places enemy in position 2
 
 		enPos.transform.parent = enemyBPosition[0]; //places the sprite where the enemy position 2 is
 		tempEnt = enPos.AddComponent<Entity>() as Entity; //temp entity in which it will switch between different goblins based off of encounter rate
@@ -45,7 +45,7 @@ public class EventManager : MonoBehaviour
 
 		encounteredEnemies = GetRandomEnemy(EnemiesInLocation(rEncounter)); //make this enemy random as well
 
-		enPos = Instantiate(emptyPos, enemyBPosition[1].transform.position, Quaternion.identity) as GameObject; //places enemy in position 2
+		enPos = Instantiate(emptyPos2, enemyBPosition[1].transform.position, Quaternion.identity) as GameObject; //places enemy in position 2
 
 		enPos.transform.parent = enemyBPosition[1]; //places the sprite where the enemy position 2 is
 		tempEnt = enPos.AddComponent<Entity>() as Entity; //temp entity in which it will switch between different goblins based off of encounter rate
@@ -66,6 +66,7 @@ public class EventManager : MonoBehaviour
 			if (enemy.chanceEncounter == rEncounter) //looks for the enemy in the list
 			{
 				findEnemy.Add(enemy);
+				Debug.Log(enemy.name);
 			}
 		}
 		return findEnemy;

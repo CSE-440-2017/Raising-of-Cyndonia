@@ -109,3 +109,8 @@ public class Entity : MonoBehaviour
 		get { return specDamage; }
 	}
 }
+
+enum CharacterRole
+{
+	Mage, Theif, Knight
+}
