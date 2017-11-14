@@ -36,12 +36,22 @@ public class EventManager : MonoBehaviour
 
 		player.GetComponent<PlayerMove>().inCombat = true; //makes it so player cant move in combat
 
-		enPos = Instantiate(emptyPos, enemyBPosition[1].transform.position, Quaternion.identity) as GameObject; //places enemy in position 1
+		enPos = Instantiate(emptyPos, enemyBPosition[0].transform.position, Quaternion.identity) as GameObject; //places enemy in position 2
 
-		enPos.transform.parent = enemyBPosition[1]; //places the sprite where the enemy position 1 is
+		enPos.transform.parent = enemyBPosition[0]; //places the sprite where the enemy position 2 is
 		tempEnt = enPos.AddComponent<Entity>() as Entity; //temp entity in which it will switch between different goblins based off of encounter rate
 		tempEnt.AddMember(encounteredEnemies);
 		enPos.GetComponent<SpriteRenderer>().sprite = encounteredEnemies.image;
+
+		encounteredEnemies = GetRandomEnemy(EnemiesInLocation(rEncounter)); //make this enemy random as well
+
+		enPos = Instantiate(emptyPos, enemyBPosition[1].transform.position, Quaternion.identity) as GameObject; //places enemy in position 2
+
+		enPos.transform.parent = enemyBPosition[1]; //places the sprite where the enemy position 2 is
+		tempEnt = enPos.AddComponent<Entity>() as Entity; //temp entity in which it will switch between different goblins based off of encounter rate
+		tempEnt.AddMember(GetRandomEnemy(EnemiesInLocation(rEncounter)));
+		enPos.GetComponent<SpriteRenderer>().sprite = encounteredEnemies.image;
+
 
 		//bUI.ChangePanel(PlayerMenu.Choice); //the change panels ui for battle based off of the choices input
 
