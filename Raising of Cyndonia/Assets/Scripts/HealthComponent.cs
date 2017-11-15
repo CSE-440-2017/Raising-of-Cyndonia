@@ -5,8 +5,8 @@ using UnityEngine;
 public class HealthComponent : MonoBehaviour 
 {
 	Entity entInfo; //grabs values from entity script
-	int maxHP, currentHP, regenAmount; //values for the gameObjects health or healing
-	bool regenHP, dead; //bool to check if allowed to regen health or is dead
+	int maxHP, currentHP, regenAmount, defenseVal; //values for the gameObjects health or healing
+	bool regenHP, dead, defenseAct; //bool to check if allowed to regen health or is dead
 
 	void Awake()
 	{
@@ -14,8 +14,10 @@ public class HealthComponent : MonoBehaviour
 		entInfo = gameObject.GetComponent<Entity>();
 		maxHP = entInfo.HitPoints;
 		regenAmount = entInfo.HitPointReg;
+		defenseVal = entInfo.Defense;
 		regenHP = entInfo.CanRegen;
 		dead = entInfo.IsDead;
+		defenseAct = entInfo.DefenseActive;
 		currentHP = maxHP;
 	}
 
@@ -30,9 +32,12 @@ public class HealthComponent : MonoBehaviour
 	}
 
 	//if gameObject is attacked it will take damage
-	public float HealthDamaged(int damage)
+	public int HealthDamaged(int damage)
 	{
-		currentHP -= damage;
+		if (defenseAct)
+			currentHP = currentHP - (damage - defenseVal);
+		else
+			currentHP -= damage;
 		return currentHP;
 	}
 

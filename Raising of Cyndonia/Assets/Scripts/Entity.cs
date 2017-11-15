@@ -7,13 +7,15 @@ using UnityEditor;
 [System.Serializable]
 public class Entity : MonoBehaviour 
 {
-	[SerializeField] bool isDead, isPlayer, canAttack, inCombat, interactable, statusEffect, canRecruit, canRegen;
-	[SerializeField] int level, hitPoints, skillPoints, hitPointReg;
-	[SerializeField] int regDamage, magDamage, specDamage;
+	[SerializeField] bool isDead, isPlayer, canAttack, inCombat, canInteract, statusEffect, canRecruit, canRegen, specialAvailable, defenseActive;
+	[SerializeField] int level, hitPoints, magicPoints, skillPoints, hitPointReg, damage, magicDamage, specialDamage, defense, specialUnlock;
 	[SerializeField] string name;
 	public Sprite image;
 
 	public RandomEncounter chanceEncounter; //chance that the enemy can be encountered
+	public CharacterRole role; //what role does the entity have in the game
+	public CharacterWeakness weakness; //The weakness of the entity
+	public CharacterStrength invulnerable; //The strengths of the entity
 
 	// Update is called once per frame
 	void Update() 
@@ -27,90 +29,180 @@ public class Entity : MonoBehaviour
 		this.name = ent.name;
 		this.image = ent.image;
 		this.chanceEncounter = ent.chanceEncounter;
+		this.role = ent.role;
+		this.weakness = ent.weakness;
+		this.invulnerable = ent.invulnerable;
+		this.weakness = ent.weakness;
 		this.level = ent.level;
-		this.regDamage = ent.regDamage;
-		this.magDamage = ent.magDamage;
-		this.specDamage = ent.specDamage;
 		this.hitPoints = ent.hitPoints;
+		this.damage = ent.damage;
+		this.magicDamage = ent.magicDamage;
+		this.specialDamage = ent.specialDamage;
 	}
 
-	public bool IsDead //checks if object is alive
+	//See if the entity is dead
+	public bool IsDead 
 	{
 		get { return isDead; }
+		set { isDead = value; }
 	}
 
-	public bool IsPlayer //checks if object is a player
+	//See if the entity is the player
+	public bool IsPlayer 
 	{
-		get { return isPlayer; }
+		get{ return isPlayer; }
+		set{ isPlayer = value; }
 	}
 
-	public bool CanAttack //checks if object can attack
+	//See if it's the entity's turn to attack
+	public bool CanAttack 
 	{
-		get { return canAttack; }
+		get{ return canAttack; }
+		set{ canAttack = value; }
 	}
 
-	public bool InCombat //checks if in combat
+	//See if the entity is interactable
+	public bool CanInteract 
 	{
-		get { return inCombat; }
+		get{ return canInteract; }
+		set{ canInteract = value; }
 	}
 
-	public bool Interactable //checks if interactable
+	//See if the entity has a status effect on them
+	public bool StatusEffect 
 	{
-		get { return interactable; }
+		get{ return statusEffect; }
+		set{ statusEffect = value; }
 	}
 
-	public bool StatusEffect //checks if there is a status effect
+	//See if you can recruit the entity
+	public bool CanRecruit 
 	{
-		get { return statusEffect; }
+		get{ return canRecruit; }
+		set{ canRecruit = value; }
 	}
 
-	public bool CanRecruit //checks if object can be recruited to party
+	//See if the entity can regenerate health
+	public bool CanRegen 
 	{
-		get { return canRecruit; }
+		get{ return canRegen; }
+		set{ canRegen = value; }
 	}
 
-	public bool CanRegen //checks if possible to regen
+	//See if the special attack is available
+	public bool SpecialAvailable 
 	{
-		get { return canRegen; }
+		get{ return specialAvailable; }
+		set{ specialAvailable = value; }
 	}
 
-	public int Level //finds out the level of object
+	//See if the player activated defend
+	public bool DefenseActive 
 	{
-		get { return level; }
+		get{ return defenseActive; }
+		set{ defenseActive = value; }
 	}
 
-	public int HitPoints //finds out the objects hitpoints
+	//See what level the entity is at
+	public int Level 
 	{
-		get { return hitPoints; }
+		get{ return level; }
+		set{ level = value; }
 	}
 
-	public int SkillPoints //finds out how many skill points there are
+	//See how much health the entity has
+	public int HitPoints 
 	{
-		get { return skillPoints; }
+		get{ return hitPoints; }
+		set{ hitPoints = value; }
 	}
 
-	public int HitPointReg //finds out how much regeneration will heal
+	//See how much magic the entity has
+	public int MagicPoints 
 	{
-		get { return hitPointReg; }
+		get{ return magicPoints; }
+		set{ magicPoints = value; }
 	}
 
-	public int RegDamage //finds out the damage the object will do
+	//See how many experience points the entity has
+	public int SkillPoints 
 	{
-		get { return regDamage; }
+		get{ return skillPoints; }
+		set{ skillPoints = value; }
 	}
 
-	public int MagDamage 
+	//See how much health the entity can regenerate
+	public int HitPointReg 
 	{
-		get { return magDamage; }
+		get{ return hitPointReg; }
+		set{ hitPointReg = value; }
 	}
 
-	public int SpecDamage 
+	//See how much base level damage the entity can do
+	public int Damage 
 	{
-		get { return specDamage; }
+		get{ return damage; }
+		set{ damage = value; }
+	}
+
+	//See how much base level magic attack damage the entity can do
+	public int MagicDamage 
+	{
+		get{ return magicDamage; }
+		set{ magicDamage = value; }
+	}
+
+	//See how much base level special attack damage the entity can do
+	public int SpecialDamage 
+	{
+		get{ return specialDamage; }
+		set{ specialDamage = value; }
+	}
+
+	//See how much base level defense entity has
+	public int Defense 
+	{
+		get{ return defense; }
+		set{ defense = value; }
+	}
+
+	//See how many turns it will take to unlock the special for the entity
+	public int SpecialUnlock
+	{
+		get{ return specialUnlock; }
+		set{ specialUnlock = value; }
+	}
+
+	public CharacterRole Role 
+	{
+		get{ return role; }
+		set { role = value; }
+	}
+
+	public CharacterWeakness Weakness 
+	{
+		get{ return weakness; }
+		set{ weakness = value; }
+	}
+
+	public CharacterStrength Invulnerable 
+	{
+		get{ return invulnerable; }
+		set{ invulnerable = value; }
 	}
 }
 
-enum CharacterRole
+public enum CharacterRole
 {
 	Mage, Theif, Knight
+}
+
+public enum CharacterWeakness
+{
+	Fire, Ice, Thunder, Dark, Light, Wind, Water, Direct
+}
+
+public enum CharacterStrength
+{
+	Fire, Ice, Thunder, Dark, Light, Wind, Water, Direct
 }

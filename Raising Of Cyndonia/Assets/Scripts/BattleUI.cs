@@ -9,11 +9,11 @@ public class BattleUI : MonoBehaviour
 	public GameObject choices, skills, invent, party, descrip; //different panels
 	public Text attack, skill, inventory, escape, skill1, skill2, skill3, skill4; //different text
 	public int curChoice; //input key for choosing
-	AttackComponent ac;
+	AttackComponent AC;
 
 	void Awake()
 	{
-		ac = gameObject.GetComponent<AttackComponent> ();
+		AC = gameObject.GetComponent<AttackComponent> ();
 	}
 		
 	// Use this for initialization
@@ -110,6 +110,7 @@ public class BattleUI : MonoBehaviour
 				if (curMenu == PlayerMenu.Choice)
 				{
 					//Attack description
+
 					ChangePanel(PlayerMenu.Description);
 				}
 				else if (curMenu == PlayerMenu.Skill)
@@ -186,4 +187,9 @@ public class BattleUI : MonoBehaviour
 public enum PlayerMenu
 {
 	Choice, Skill, Inventory, Description
+}
+
+public enum AttackType
+{
+	Fire, Ice, Thunder, Dark, Light, Wind, Water, Direct
 }

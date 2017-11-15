@@ -2,40 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class AttackComponent : MonoBehaviour {
-	Entity stats;
-	[SerializeField] int entityRegDmg, entityMagDmg, entitySpecDmg;
-	GameObject player;
-	//GameObject Enemy;
+	Entity entInfo;
+	HealthComponent HC;
+	[SerializeField] int dmg, magicDMG, specDMG;
 
-	void Awake(){
-		stats = gameObject.GetComponent<Entity> ();
-		entityRegDmg = stats.RegDamage;
-		entityMagDmg = stats.MagDamage;
-		entitySpecDmg = stats.SpecDamage;
+	void Awake()
+	{
+		entInfo = gameObject.GetComponent <Entity> ();
+		HC = gameObject.GetComponent <HealthComponent> ();
 
-		player = GameObject.FindGameObjectWithTag ("Player");
-		//Enemy = GameObject.FindGameObjectWithTag ("Enemy");
+		dmg = entInfo.Damage;
+		magicDMG = entInfo.MagicDamage;
+		specDMG = entInfo.SpecialDamage; 
 	}
 
-	void doRegAttack(){
-		if (gameObject.tag == "Enemy")
-			player.GetComponent<HealthComponent>().HealthDamaged (entityRegDmg);
-		//else
-			//Enemy.GetComponent <HealthComponent>().HealthDamaged (entityRegDmg);
-	}
-		
-	void doMagAttack(){
-		if (gameObject.tag == "Enemy")
-			player.GetComponent<HealthComponent> ().HealthDamaged (entityMagDmg);
-		//else
-			//Enemy.GetComponent <HealthComponent> ().HealthDamaged (entityMagDmg);
-	}
-
-	void doSpecAttack(){
-		if (gameObject.tag == "Enemy")
-			player.GetComponent<HealthComponent> ().HealthDamaged (entitySpecDmg);
-		//else
-			//Enemy.GetComponent <HealthComponent> ().HealthDamaged (entitySpecDmg);
-	}
 }
