@@ -9,6 +9,8 @@ public class BattleUI : MonoBehaviour
 	public GameObject choices, skills, invent, party, descrip; //different panels
 	public Text attack, skill, inventory, escape, skill1, skill2, skill3, skill4; //different text
 	public int curChoice; //input key for choosing
+	public AttackTypes AT;
+	public MagicTypes MT;
 	AttackComponent AC;
 
 	void Awake()
@@ -26,32 +28,27 @@ public class BattleUI : MonoBehaviour
 	void Update() 
 	{
 		//gets input when pressed keys 1-4 down
-		if(Input.GetKeyDown(KeyCode.Alpha1))
-		{
+		if (Input.GetKeyDown (KeyCode.Alpha1 || KeyCode.Keypad1)) 
 			curChoice = 1;
-		}
-		else if(Input.GetKeyDown(KeyCode.Alpha2))
-		{
+		
+		else if (Input.GetKeyDown (KeyCode.Alpha2 || KeyCode.Keypad2)) 
 			curChoice = 2;
-		}
-		else if(Input.GetKeyDown(KeyCode.Alpha3))
-		{
+		
+		else if (Input.GetKeyDown (KeyCode.Alpha3 || KeyCode.Keypad3)) 
 			curChoice = 3;
-		}
-		else if(Input.GetKeyDown(KeyCode.Alpha4))
-		{
+		
+		else if (Input.GetKeyDown (KeyCode.Alpha4 || KeyCode.Keypad4)) 
 			curChoice = 4;
-		}
+		
+		else if (Input.GetKeyDown (KeyCode.Alpha5 || KeyCode.Keypad5)) 
+			curChoice = 5;
+		
 		else //if a different key is pressed then sets curChoice as zero and does nothing
-		{
 			curChoice = 0;
-		}
 
 		//if current choice is 1-4 then it will call the player choice function
-		if(curChoice >= 1 && curChoice <= 4)
-		{
+		if(curChoice >= 1 && curChoice <= 5)
 			PlayerChoice(curChoice);
-		}
 
 	}
 
@@ -177,6 +174,8 @@ public class BattleUI : MonoBehaviour
 					ChangePanel(PlayerMenu.Description);
 				}
 				break;
+		case 5:
+			break;
 
 		}
 	}
@@ -186,10 +185,15 @@ public class BattleUI : MonoBehaviour
 //player menu panels
 public enum PlayerMenu
 {
-	Choice, Skill, Inventory, Description
+	Choice, Attack, Skill, Inventory, Description
 }
 
-public enum AttackType
+public enum AttackTypes
 {
-	Fire, Ice, Thunder, Dark, Light, Wind, Water, Direct
+	Magic, Direct, Special, Block
+}
+
+public enum MagicTypes
+{
+	Fire, Ice, Thunder, Dark, Light, Wind, Water, Direct, Heal
 }

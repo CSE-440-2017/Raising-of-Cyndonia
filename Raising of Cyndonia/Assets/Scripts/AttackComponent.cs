@@ -6,16 +6,19 @@ using UnityEngine;
 public class AttackComponent : MonoBehaviour {
 	Entity entInfo;
 	HealthComponent HC;
-	[SerializeField] int dmg, magicDMG, specDMG;
+	[SerializeField] int baseDMG, magicDMG, specDMG, dodge;
 
 	void Awake()
 	{
 		entInfo = gameObject.GetComponent <Entity> ();
 		HC = gameObject.GetComponent <HealthComponent> ();
 
-		dmg = entInfo.Damage;
+		baseDMG = entInfo.Damage;
 		magicDMG = entInfo.MagicDamage;
 		specDMG = entInfo.SpecialDamage; 
 	}
 
+	void Attack(GameObject other)
+	{
+		if(other.gameObject.GetComponent<Entity>().Weakness ==
 }
