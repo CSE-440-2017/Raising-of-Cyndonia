@@ -34,7 +34,15 @@ public class HealthComponent : MonoBehaviour
 	//if gameObject is attacked it will take damage
 	public int HealthDamaged(int damage)
 	{
-		currentHP -= damage;
+		if (defenseAct) {
+			damage -= defenseVal;
+			if (damage > 0)
+				currentHP -= damage;
+		} 
+
+		else
+			currentHP -= damage;
+		
 		return currentHP;
 	}
 
