@@ -7,7 +7,8 @@ public class SkillsComponent : MonoBehaviour
 {
 	Entity entStat; //gets the entity's stats
 	public SkillType sType; //determines the type of skill used
-	[SerializeField] string name; 
+	[SerializeField] string skillName, skillDescription;
+	[SerializeField] int skillID, skillPower, skillCost; 
 
 
 	// Use this for initialization
@@ -20,6 +21,36 @@ public class SkillsComponent : MonoBehaviour
 	void Update() 
 	{
 		
+	}
+
+	public string SkillName
+	{
+		get{return skillName;}
+		set{skillName = value;}
+	}
+
+	public string SkillDescription
+	{
+		get{return skillDescription;}
+		set{skillDescription = value;}
+	}
+
+	public int SkillID
+	{
+		get{return skillID;}
+		set{skillID = value;}
+	}
+
+	public int SkillPower
+	{
+		get{return skillPower;}
+		set{skillPower = value;}
+	}
+
+	public int SkillCost
+	{
+		get{return skillCost;}
+		set{skillCost = value;}
 	}
 }
 

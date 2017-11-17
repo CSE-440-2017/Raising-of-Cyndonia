@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
 }
 
 //players party and skills they have
-[System.Serializable]
+//[System.Serializable]
 public class PlayerParty
 {
 	public Entity character; //the characters that are in the party
