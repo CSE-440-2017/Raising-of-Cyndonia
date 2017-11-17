@@ -167,6 +167,7 @@ public class BattleUI : MonoBehaviour
 			} 
 			else if (curMenu == PlayerMenu.Magic1) 
 			{
+				//
 				ChangePanel (PlayerMenu.Description);
 			}
 			else if (curMenu == PlayerMenu.Magic2) 
