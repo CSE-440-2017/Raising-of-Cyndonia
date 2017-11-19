@@ -5,8 +5,8 @@ using UnityEngine;
 public class BattleStateManager : MonoBehaviour 
 {
 	public StatesOfBattle curState;
-	public GameObject player, enemy;
-	public PlayerParty playerUnit;
+	public GameObject player, enemy, playerUnit;
+	//public PlayerParty playerUnit;
 	//public EnemyParty enemyUnit;
 	public List<GameObject> playersUnits = new List<GameObject>();
 	public List<GameObject> enemysUnits = new List<GameObject>();
@@ -33,8 +33,10 @@ public class BattleStateManager : MonoBehaviour
 				break;
 
 			case (StatesOfBattle.PlayerTurn):
-				playerUnit = player.GetComponent<PlayerInfo>().pParty[unitNum]; //grabs a unit from the players party list
+				playerUnit = player.GetComponent<PlayerInfo>().allParty[unitNum]; //grabs a unit from the players party list
 				bUI.ChangePanel(PlayerMenu.Choice); //the change panels ui for battle based off of the choices input
+				Debug.Log("Players Turn, Party Member " + unitNum);
+
 				break;
 
 			case (StatesOfBattle.EnemyTurn):

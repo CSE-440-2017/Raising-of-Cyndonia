@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerInfo : MonoBehaviour 
 {
-	public List<PlayerParty> pParty = new List<PlayerParty>(); //list of the players party
+	public List<GameObject> allParty = new List<GameObject>(); //list of the players party
 
 	// Use this for initialization
 	void Start() 

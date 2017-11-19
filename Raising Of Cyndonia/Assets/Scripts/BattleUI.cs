@@ -69,7 +69,7 @@ public class BattleUI : MonoBehaviour
 				invent.gameObject.SetActive(false);
 				party.gameObject.SetActive(true);
 				descrip.gameObject.SetActive(false);
-				target.gameObject.SetActive(true);
+				target.gameObject.SetActive(false);
 				break;
 
 			//the skills panel
@@ -82,7 +82,7 @@ public class BattleUI : MonoBehaviour
 				invent.gameObject.SetActive(false);
 				party.gameObject.SetActive(true);
 				descrip.gameObject.SetActive(false);
-				target.gameObject.SetActive(true);
+				target.gameObject.SetActive(false);
 				break;
 
 			//the magic 1 panel
@@ -95,7 +95,7 @@ public class BattleUI : MonoBehaviour
 				invent.gameObject.SetActive(false);
 				party.gameObject.SetActive(true);
 				descrip.gameObject.SetActive(false);
-				target.gameObject.SetActive(true);
+				target.gameObject.SetActive(false);
 				break;
 
 			//the magic 2 panel
@@ -108,7 +108,7 @@ public class BattleUI : MonoBehaviour
 				invent.gameObject.SetActive(false);
 				party.gameObject.SetActive(true);
 				descrip.gameObject.SetActive(false);
-				target.gameObject.SetActive(true);
+				target.gameObject.SetActive(false);
 				break;
 
 			//the special attack panel
@@ -121,7 +121,7 @@ public class BattleUI : MonoBehaviour
 				invent.gameObject.SetActive(false);
 				party.gameObject.SetActive(true);
 				descrip.gameObject.SetActive(true);
-				target.gameObject.SetActive(true);
+				target.gameObject.SetActive(false);
 				break;
 
 			//the inventory panel
@@ -134,7 +134,7 @@ public class BattleUI : MonoBehaviour
 				invent.gameObject.SetActive(true);
 				party.gameObject.SetActive(true);
 				descrip.gameObject.SetActive(false);
-				target.gameObject.SetActive(true);
+				target.gameObject.SetActive(false);
 				break;
 
 			//the description of actions panel
@@ -147,7 +147,7 @@ public class BattleUI : MonoBehaviour
 				invent.gameObject.SetActive(false);
 				party.gameObject.SetActive(true);
 				descrip.gameObject.SetActive(true);
-				target.gameObject.SetActive(true);
+				target.gameObject.SetActive(false);
 				break;
 
 			case PlayerMenu.Target:
