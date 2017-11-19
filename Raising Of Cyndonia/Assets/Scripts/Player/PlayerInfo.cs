@@ -19,7 +19,7 @@ public class PlayerInfo : MonoBehaviour
 	}
 }
 
-//players party and skills they have
+//players party and skills they have not sure if this will be used
 //[System.Serializable]
 public class PlayerParty
 {

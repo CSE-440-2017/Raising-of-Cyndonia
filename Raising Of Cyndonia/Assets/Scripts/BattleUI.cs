@@ -6,18 +6,11 @@ using UnityEngine.UI;
 public class BattleUI : MonoBehaviour 
 {
 	public PlayerMenu curMenu; //current menu player is on
-	public GameObject choices, skills, invent, party, magic1, magic2, special, descrip, target; //different panels
-	public Text attack, skill, inventory, escape, skill1, skill2, skill3, skill4; //different text
+	public GameObject choices, skills, invent, party, descrip, target; //different panels
+	//public Text attack, skill, inventory, escape, skill1, skill2, skill3, skill4; //different text
 	public int curChoice, targetUnit; //input key for choosing
-	public AttackTypes AT;
-	public MagicTypes MT;
-	AttackComponent AC;
-
-	void Awake()
-	{
-		AC = gameObject.GetComponent<AttackComponent> ();
-	}
-		
+	public BattleStateManager BSM;
+			
 	// Use this for initialization
 	void Start() 
 	{
@@ -41,9 +34,6 @@ public class BattleUI : MonoBehaviour
 		else if (Input.GetKeyDown (KeyCode.Alpha4) || Input.GetKeyDown (KeyCode.Keypad4)) 
 			curChoice = 4;
 		
-		else if (Input.GetKeyDown (KeyCode.Alpha5) || Input.GetKeyDown (KeyCode.Keypad5)) 
-			curChoice = 5;
-		
 		else //if a different key is pressed then sets curChoice as zero and does nothing
 			curChoice = 0;
 
@@ -64,9 +54,6 @@ public class BattleUI : MonoBehaviour
 			case PlayerMenu.Choice:				
 				choices.gameObject.SetActive(true);
 				skills.gameObject.SetActive(false);
-				magic1.gameObject.SetActive(false);
-				magic2.gameObject.SetActive(false);
-				special.gameObject.SetActive(false);
 				invent.gameObject.SetActive(false);
 				party.gameObject.SetActive(true);
 				descrip.gameObject.SetActive(false);
@@ -77,61 +64,16 @@ public class BattleUI : MonoBehaviour
 			case PlayerMenu.Skill:
 				choices.gameObject.SetActive(false);
 				skills.gameObject.SetActive(true);
-				magic1.gameObject.SetActive(false);
-				magic2.gameObject.SetActive(false);
-				special.gameObject.SetActive(false);
 				invent.gameObject.SetActive(false);
 				party.gameObject.SetActive(true);
 				descrip.gameObject.SetActive(false);
 				target.gameObject.SetActive(false);
-				break;
-
-			//the magic 1 panel
-			case PlayerMenu.Magic1:
-				choices.gameObject.SetActive(false);
-				skills.gameObject.SetActive(false);
-				magic1.gameObject.SetActive(true);
-				magic2.gameObject.SetActive(false);
-				special.gameObject.SetActive(false);
-				invent.gameObject.SetActive(false);
-				party.gameObject.SetActive(true);
-				descrip.gameObject.SetActive(false);
-				target.gameObject.SetActive(false);
-				break;
-
-			//the magic 2 panel
-			case PlayerMenu.Magic2:
-				choices.gameObject.SetActive(false);
-				skills.gameObject.SetActive(false);
-				magic1.gameObject.SetActive(false);
-				magic2.gameObject.SetActive(true);
-				special.gameObject.SetActive(false);
-				invent.gameObject.SetActive(false);
-				party.gameObject.SetActive(true);
-				descrip.gameObject.SetActive(false);
-				target.gameObject.SetActive(false);
-				break;
-
-			//the special attack panel
-			case PlayerMenu.Special:
-				choices.gameObject.SetActive(false);
-				skills.gameObject.SetActive(false);
-				magic1.gameObject.SetActive(false);
-				magic2.gameObject.SetActive(false);
-				special.gameObject.SetActive(false);
-				invent.gameObject.SetActive(false);
-				party.gameObject.SetActive(true);
-				descrip.gameObject.SetActive(true);
-				target.gameObject.SetActive(false);
-				break;
+				break;			
 
 			//the inventory panel
 			case PlayerMenu.Inventory:
 				choices.gameObject.SetActive(false);
 				skills.gameObject.SetActive(false);
-				magic1.gameObject.SetActive(false);
-				magic2.gameObject.SetActive(false);
-				special.gameObject.SetActive(false);
 				invent.gameObject.SetActive(true);
 				party.gameObject.SetActive(true);
 				descrip.gameObject.SetActive(false);
@@ -142,9 +84,6 @@ public class BattleUI : MonoBehaviour
 			case PlayerMenu.Description:
 				choices.gameObject.SetActive(false);
 				skills.gameObject.SetActive(false);
-				magic1.gameObject.SetActive(false);
-				magic2.gameObject.SetActive(false);
-				special.gameObject.SetActive(false);
 				invent.gameObject.SetActive(false);
 				party.gameObject.SetActive(true);
 				descrip.gameObject.SetActive(true);
@@ -154,15 +93,11 @@ public class BattleUI : MonoBehaviour
 			case PlayerMenu.Target:
 				choices.gameObject.SetActive(false);
 				skills.gameObject.SetActive(false);
-				magic1.gameObject.SetActive(false);
-				magic2.gameObject.SetActive(false);
-				special.gameObject.SetActive(false);
 				invent.gameObject.SetActive(false);
 				party.gameObject.SetActive(true);
 				descrip.gameObject.SetActive(false);
 				target.gameObject.SetActive(true);
 				break;
-
 		}
 	}
 
@@ -173,176 +108,114 @@ public class BattleUI : MonoBehaviour
 		{
 			case 1:
 				if (curMenu == PlayerMenu.Choice) 
-				{
-					//Attack description
-					AT = AttackTypes.Direct;
-					MT = MagicTypes.Direct;
+				{					
 					ChangePanel (PlayerMenu.Target);
 				} 
 				else if (curMenu == PlayerMenu.Skill) 
 				{
 					//Skill 1 used description
-					ChangePanel (PlayerMenu.Magic1);
+					ChangePanel(PlayerMenu.Target);
 				} 	
-				else if (curMenu == PlayerMenu.Magic1) 
-				{
-					
-					ChangePanel (PlayerMenu.Description);
-				}
-				else if (curMenu == PlayerMenu.Magic2) 
-				{
-					ChangePanel (PlayerMenu.Description);
-				}
-				else if (curMenu == PlayerMenu.Special) 
-				{
-					ChangePanel (PlayerMenu.Description);
-				}
 				else if (curMenu == PlayerMenu.Inventory)
 				{
 					//Item 1 used description
 					ChangePanel(PlayerMenu.Description);
+				}
+				else if (curMenu == PlayerMenu.Description)
+				{
+					//Changes back to choice if next party member
+					ChangePanel(PlayerMenu.Choice);
 				}
 				else if (curMenu == PlayerMenu.Target)
 				{
 					//Target number 1 used description
 					targetUnit = curChoice - 1; //choose to target the first unit in list
 					ChangePanel(PlayerMenu.Description);
+					++BSM.unitNum; //go to the next units turn
 				}
 				break;
 
 			case 2:
 				if (curMenu == PlayerMenu.Choice) 
 				{
-					//Attack description
-					ChangePanel (PlayerMenu.Description);
+					//Skill Menu
+					ChangePanel (PlayerMenu.Skill);
 				} 
 				else if (curMenu == PlayerMenu.Skill) 
 				{
-					//Skill 1 used description
-					ChangePanel (PlayerMenu.Description);
+					//Skill 2 used description
+					ChangePanel (PlayerMenu.Target);
 				} 
-				else if (curMenu == PlayerMenu.Magic1) 
-				{
-					ChangePanel (PlayerMenu.Description);
-				}
-				else if (curMenu == PlayerMenu.Magic2) 
-				{
-					ChangePanel (PlayerMenu.Description);
-				}
-				else if (curMenu == PlayerMenu.Special) 
-				{
-					ChangePanel (PlayerMenu.Description);
-				}
 				else if (curMenu == PlayerMenu.Inventory)
 				{
-					//Item 1 used description
+					//Item 2 used description
 					ChangePanel(PlayerMenu.Description);
+				}
+				else if (curMenu == PlayerMenu.Target)
+				{
+					//Target number 2 used description
+					targetUnit = curChoice - 1; //choose to target the first unit in list
+					ChangePanel(PlayerMenu.Description);
+					++BSM.unitNum;//go to the next units turn
 				}
 				break;
 
 			case 3:
 				if (curMenu == PlayerMenu.Choice) 
 				{
-					//Attack description
-					ChangePanel (PlayerMenu.Skill);
+					//Inventory Menu
+					ChangePanel (PlayerMenu.Inventory);
 				} 
 
 				else if (curMenu == PlayerMenu.Skill) 
 				{
-					//Skill 1 used description
-					ChangePanel (PlayerMenu.Choice);
+					//Skill 3 used description
+					ChangePanel (PlayerMenu.Target);
 				} 
-				else if (curMenu == PlayerMenu.Magic1) 
-				{
-					ChangePanel (PlayerMenu.Description);
-				}
-				else if (curMenu == PlayerMenu.Magic2) 
-				{
-					ChangePanel (PlayerMenu.Description);
-				}
-				else if (curMenu == PlayerMenu.Special) 
-				{
-					ChangePanel (PlayerMenu.Choice);
-				}
 				else if (curMenu == PlayerMenu.Inventory)
 				{
-					//Item 1 used description
+					//Item 3 used description
 					ChangePanel(PlayerMenu.Description);
+				}
+				else if (curMenu == PlayerMenu.Target)
+				{
+					//Target number 3 used description
+					targetUnit = curChoice - 1; //choose to target the first unit in list
+					ChangePanel(PlayerMenu.Description);
+					++BSM.unitNum; //go to the next units turn
 				}
 				break;
 
 			case 4:
 				if (curMenu == PlayerMenu.Choice) 
 				{
-					//Attack description
+					//Block description
 					ChangePanel (PlayerMenu.Description);
 				} 
 				else if (curMenu == PlayerMenu.Skill) 
 				{
-					//Skill 1 used description
-					ChangePanel (PlayerMenu.Magic1);
-				} 
-				else if (curMenu == PlayerMenu.Magic1) 
-				{
-					ChangePanel (PlayerMenu.Magic2);
-				}
-				else if (curMenu == PlayerMenu.Magic2) 
-				{
-					ChangePanel (PlayerMenu.Description);
+					//Skill 4 used description
+					ChangePanel (PlayerMenu.Target);
 				}
 				else if (curMenu == PlayerMenu.Inventory)
 				{
-					//Item 1 used description
+					//Item 4 used description
 					ChangePanel(PlayerMenu.Description);
 				}
-				break;
-
-			case 5:
-				if (curMenu == PlayerMenu.Choice) 
+				else if (curMenu == PlayerMenu.Target)
 				{
-					//Attack description
-					ChangePanel (PlayerMenu.Description);
-				} 
-				else if (curMenu == PlayerMenu.Magic1) 
-				{
-					ChangePanel (PlayerMenu.Skill);
-				} 
-				else if (curMenu == PlayerMenu.Magic2)
-				{
-					ChangePanel (PlayerMenu.Magic1);
-				} 
-				else if (curMenu == PlayerMenu.Inventory) 
-				{
-					//Item 1 used description
-					ChangePanel (PlayerMenu.Description);
+					//Target number 4 used description
+					targetUnit = curChoice - 1; //choose to target the first unit in list
+					ChangePanel(PlayerMenu.Description);
+					++BSM.unitNum; //go to the next units turn
 				}
 				break;
 		}
-	}
-		
-	public AttackTypes attackType 
-	{
-		get{ return AT; }
-	}
-
-	public MagicTypes magicType 
-	{
-		get{ return MT; }
 	}
 }
 
 //player menu panels
 public enum PlayerMenu
 {
-	Choice, Attack, Skill, Inventory, Magic1, Magic2, Special, Description, Target
-}
-
-public enum AttackTypes
-{
-	Magic, Direct, Special, Block
-}
-
-public enum MagicTypes
-{
-	Fire, Ice, Thunder, Dark, Light, Wind, Water, Direct, Heal
+	Choice, Attack, Skill, Inventory, Description, Target
 }

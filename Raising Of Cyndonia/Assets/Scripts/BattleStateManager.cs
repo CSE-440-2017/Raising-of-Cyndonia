@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class BattleStateManager : MonoBehaviour 
 {
-	public StatesOfBattle curState;
-	public GameObject player, enemy, playerUnit;
-	//public PlayerParty playerUnit;
+	public StatesOfBattle currentState; //state of the battle
+	public GameObject player, enemy, playerUnit; //player, enemy, and the party of player and enemy game objects
+	//not sure we will be using these yet
+	//public PlayerParty playerUnit; 
 	//public EnemyParty enemyUnit;
 	//public List<GameObject> playersUnits = new List<GameObject>();
 	//public List<GameObject> enemysUnits = new List<GameObject>();
@@ -16,44 +17,46 @@ public class BattleStateManager : MonoBehaviour
 	// Use this for initialization
 	void Start() 
 	{
-		unitNum = 0;
-		player = GameObject.FindGameObjectWithTag("Player");
-		curState = StatesOfBattle.Start;
+		unitNum = 0; //which unit will be going
+		player = GameObject.FindGameObjectWithTag("Player"); //sets up the player will have a setup for enemy aswell
+		currentState = StatesOfBattle.Start; //sets the current state to start
 
 	}
 	
 	// Update is called once per frame
 	void Update() 
 	{
-		switch (curState)
+		switch (currentState)
 		{
 			case (StatesOfBattle.Start):
 				//setup battle function
-				curState = StatesOfBattle.PlayerTurn;
+				bUI.ChangePanel(PlayerMenu.Choice);
+				currentState = StatesOfBattle.PlayerTurn;
 				break;
 
-			case (StatesOfBattle.PlayerTurn):
+			case (StatesOfBattle.PlayerTurn): //players turn goes through until all party members have done something
 				playerUnit = player.GetComponent<PlayerInfo>().allParty[unitNum]; //grabs a unit from the players party list
-				bUI.ChangePanel(PlayerMenu.Choice); //the change panels ui for battle based off of the choices input
-				Debug.Log("Players Turn, Party Member " + unitNum);
+				//bUI.ChangePanel(PlayerMenu.Choice); //the change panels ui for battle based off of the choices input
+				//Debug.Log("Players Turn, Party Member " + unitNum);
 
 				break;
 
-			case (StatesOfBattle.EnemyTurn):
+			case (StatesOfBattle.EnemyTurn): //enemies turn goes through until all enemies have done something
 				//enemysUnit = enemy.GetComponent<PlayerInfo>().eParty[unitNum];
 				break;
 
-			case (StatesOfBattle.CalcDamage):
+			case (StatesOfBattle.CalcDamage): //calculates the damage done
 				break;
 
-			case (StatesOfBattle.Lose):
+			case (StatesOfBattle.Lose): //set up if player loses
 				break;
 
-			case (StatesOfBattle.Win):
+			case (StatesOfBattle.Win): //set up if player wins
 				break;
 		}
 	}
 
+	//was for changeing states have not finished it
 	void ChangeState()
 	{
 	}

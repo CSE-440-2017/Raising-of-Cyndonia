@@ -18,11 +18,11 @@ public class PlayerMove : MonoBehaviour
 	public Sprite sSprite;
 	public Sprite wSprite;
 
-	public float speed = 0.5f;
+	public float speed = 0.5f; //speed of grid transition
 
 	void Start()
 	{
-		inCombat = false;
+		inCombat = false; //not in combat will allow movement
 	}
 	
 	// Update is called once per frame
