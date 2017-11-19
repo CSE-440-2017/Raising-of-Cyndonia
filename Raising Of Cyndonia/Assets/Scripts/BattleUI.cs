@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class BattleUI : MonoBehaviour 
 {
 	public PlayerMenu curMenu; //current menu player is on
-	public GameObject choices, skills, invent, party, magic1, magic2, special, descrip; //different panels
+	public GameObject choices, skills, invent, party, magic1, magic2, special, descrip, target; //different panels
 	public Text attack, skill, inventory, escape, skill1, skill2, skill3, skill4; //different text
 	public int curChoice; //input key for choosing
 	public AttackTypes AT;
@@ -59,89 +59,108 @@ public class BattleUI : MonoBehaviour
 		curChoice = 0;
 		switch (menu)
 		{
-		//the beginning panel
-		case PlayerMenu.Choice:				
-			choices.gameObject.SetActive (true);
-			skills.gameObject.SetActive (false);
-			magic1.gameObject.SetActive (false);
-			magic2.gameObject.SetActive (false);
-			special.gameObject.SetActive (false);
-			invent.gameObject.SetActive (false);
-			party.gameObject.SetActive (true);
-			descrip.gameObject.SetActive (false);
-			break;
+			//the beginning panel
+			case PlayerMenu.Choice:				
+				choices.gameObject.SetActive(true);
+				skills.gameObject.SetActive(false);
+				magic1.gameObject.SetActive(false);
+				magic2.gameObject.SetActive(false);
+				special.gameObject.SetActive(false);
+				invent.gameObject.SetActive(false);
+				party.gameObject.SetActive(true);
+				descrip.gameObject.SetActive(false);
+				target.gameObject.SetActive(true);
+				break;
 
 			//the skills panel
-		case PlayerMenu.Skill:
-			choices.gameObject.SetActive (false);
-			skills.gameObject.SetActive (true);
-			magic1.gameObject.SetActive (false);
-			magic2.gameObject.SetActive (false);
-			special.gameObject.SetActive (false);
-			invent.gameObject.SetActive (false);
-			party.gameObject.SetActive (true);
-			descrip.gameObject.SetActive (false);
-			break;
+			case PlayerMenu.Skill:
+				choices.gameObject.SetActive(false);
+				skills.gameObject.SetActive(true);
+				magic1.gameObject.SetActive(false);
+				magic2.gameObject.SetActive(false);
+				special.gameObject.SetActive(false);
+				invent.gameObject.SetActive(false);
+				party.gameObject.SetActive(true);
+				descrip.gameObject.SetActive(false);
+				target.gameObject.SetActive(true);
+				break;
 
 			//the magic 1 panel
-		case PlayerMenu.Magic1:
-			choices.gameObject.SetActive (false);
-			skills.gameObject.SetActive (false);
-			magic1.gameObject.SetActive (true);
-			magic2.gameObject.SetActive (false);
-			special.gameObject.SetActive (false);
-			invent.gameObject.SetActive (false);
-			party.gameObject.SetActive (true);
-			descrip.gameObject.SetActive (false);
-			break;
+			case PlayerMenu.Magic1:
+				choices.gameObject.SetActive(false);
+				skills.gameObject.SetActive(false);
+				magic1.gameObject.SetActive(true);
+				magic2.gameObject.SetActive(false);
+				special.gameObject.SetActive(false);
+				invent.gameObject.SetActive(false);
+				party.gameObject.SetActive(true);
+				descrip.gameObject.SetActive(false);
+				target.gameObject.SetActive(true);
+				break;
 
 			//the magic 2 panel
-		case PlayerMenu.Magic2:
-			choices.gameObject.SetActive (false);
-			skills.gameObject.SetActive (false);
-			magic1.gameObject.SetActive (false);
-			magic2.gameObject.SetActive (true);
-			special.gameObject.SetActive (false);
-			invent.gameObject.SetActive (false);
-			party.gameObject.SetActive (true);
-			descrip.gameObject.SetActive (false);
-			break;
+			case PlayerMenu.Magic2:
+				choices.gameObject.SetActive(false);
+				skills.gameObject.SetActive(false);
+				magic1.gameObject.SetActive(false);
+				magic2.gameObject.SetActive(true);
+				special.gameObject.SetActive(false);
+				invent.gameObject.SetActive(false);
+				party.gameObject.SetActive(true);
+				descrip.gameObject.SetActive(false);
+				target.gameObject.SetActive(true);
+				break;
 
 			//the special attack panel
-		case PlayerMenu.Special:
-			choices.gameObject.SetActive (false);
-			skills.gameObject.SetActive (false);
-			magic1.gameObject.SetActive (false);
-			magic2.gameObject.SetActive (false);
-			special.gameObject.SetActive (false);
-			invent.gameObject.SetActive (false);
-			party.gameObject.SetActive (true);
-			descrip.gameObject.SetActive (true);
-			break;
+			case PlayerMenu.Special:
+				choices.gameObject.SetActive(false);
+				skills.gameObject.SetActive(false);
+				magic1.gameObject.SetActive(false);
+				magic2.gameObject.SetActive(false);
+				special.gameObject.SetActive(false);
+				invent.gameObject.SetActive(false);
+				party.gameObject.SetActive(true);
+				descrip.gameObject.SetActive(true);
+				target.gameObject.SetActive(true);
+				break;
 
 			//the inventory panel
-		case PlayerMenu.Inventory:
-			choices.gameObject.SetActive (false);
-			skills.gameObject.SetActive (false);
-			magic1.gameObject.SetActive (false);
-			magic2.gameObject.SetActive (false);
-			special.gameObject.SetActive (false);
-			invent.gameObject.SetActive (true);
-			party.gameObject.SetActive (true);
-			descrip.gameObject.SetActive (false);
-			break;
+			case PlayerMenu.Inventory:
+				choices.gameObject.SetActive(false);
+				skills.gameObject.SetActive(false);
+				magic1.gameObject.SetActive(false);
+				magic2.gameObject.SetActive(false);
+				special.gameObject.SetActive(false);
+				invent.gameObject.SetActive(true);
+				party.gameObject.SetActive(true);
+				descrip.gameObject.SetActive(false);
+				target.gameObject.SetActive(true);
+				break;
 
 			//the description of actions panel
-		case PlayerMenu.Description:
-			choices.gameObject.SetActive (false);
-			skills.gameObject.SetActive (false);
-			magic1.gameObject.SetActive (false);
-			magic2.gameObject.SetActive (false);
-			special.gameObject.SetActive (false);
-			invent.gameObject.SetActive (false);
-			party.gameObject.SetActive (true);
-			descrip.gameObject.SetActive (true);
-			break;
+			case PlayerMenu.Description:
+				choices.gameObject.SetActive(false);
+				skills.gameObject.SetActive(false);
+				magic1.gameObject.SetActive(false);
+				magic2.gameObject.SetActive(false);
+				special.gameObject.SetActive(false);
+				invent.gameObject.SetActive(false);
+				party.gameObject.SetActive(true);
+				descrip.gameObject.SetActive(true);
+				target.gameObject.SetActive(true);
+				break;
+
+			case PlayerMenu.Target:
+				choices.gameObject.SetActive(false);
+				skills.gameObject.SetActive(false);
+				magic1.gameObject.SetActive(false);
+				magic2.gameObject.SetActive(false);
+				special.gameObject.SetActive(false);
+				invent.gameObject.SetActive(false);
+				party.gameObject.SetActive(true);
+				descrip.gameObject.SetActive(false);
+				target.gameObject.SetActive(true);
+				break;
 
 		}
 	}
@@ -305,7 +324,7 @@ public class BattleUI : MonoBehaviour
 //player menu panels
 public enum PlayerMenu
 {
-	Choice, Attack, Skill, Inventory, Magic1, Magic2, Special, Description
+	Choice, Attack, Skill, Inventory, Magic1, Magic2, Special, Description, Target
 }
 
 public enum AttackTypes

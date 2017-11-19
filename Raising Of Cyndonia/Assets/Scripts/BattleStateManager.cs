@@ -5,12 +5,19 @@ using UnityEngine;
 public class BattleStateManager : MonoBehaviour 
 {
 	public StatesOfBattle curState;
+	public GameObject player, enemy;
+	public PlayerParty playerUnit;
+	//public EnemyParty enemyUnit;
 	public List<GameObject> playersUnits = new List<GameObject>();
 	public List<GameObject> enemysUnits = new List<GameObject>();
+	public int unitNum;
+	public BattleUI bUI;
 
 	// Use this for initialization
 	void Start() 
 	{
+		unitNum = 0;
+		player = GameObject.FindGameObjectWithTag("Player");
 		curState = StatesOfBattle.Start;
 
 	}
@@ -26,9 +33,12 @@ public class BattleStateManager : MonoBehaviour
 				break;
 
 			case (StatesOfBattle.PlayerTurn):
+				playerUnit = player.GetComponent<PlayerInfo>().pParty[unitNum]; //grabs a unit from the players party list
+				bUI.ChangePanel(PlayerMenu.Choice); //the change panels ui for battle based off of the choices input
 				break;
 
 			case (StatesOfBattle.EnemyTurn):
+				//enemysUnit = enemy.GetComponent<PlayerInfo>().eParty[unitNum];
 				break;
 
 			case (StatesOfBattle.CalcDamage):
@@ -45,6 +55,7 @@ public class BattleStateManager : MonoBehaviour
 	void ChangeState()
 	{
 	}
+		
 }
 
 public enum StatesOfBattle

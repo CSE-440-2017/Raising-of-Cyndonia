@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour 
+public class PlayerInfo : MonoBehaviour 
 {
 	public List<PlayerParty> pParty = new List<PlayerParty>(); //list of the players party
 
