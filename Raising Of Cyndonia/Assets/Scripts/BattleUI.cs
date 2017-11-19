@@ -8,7 +8,7 @@ public class BattleUI : MonoBehaviour
 	public PlayerMenu curMenu; //current menu player is on
 	public GameObject choices, skills, invent, party, magic1, magic2, special, descrip, target; //different panels
 	public Text attack, skill, inventory, escape, skill1, skill2, skill3, skill4; //different text
-	public int curChoice; //input key for choosing
+	public int curChoice, targetUnit; //input key for choosing
 	public AttackTypes AT;
 	public MagicTypes MT;
 	AttackComponent AC;
@@ -21,6 +21,7 @@ public class BattleUI : MonoBehaviour
 	// Use this for initialization
 	void Start() 
 	{
+		ChangePanel(PlayerMenu.Description);
 		//curMenu = PlayerMenu.Choice;
 	}
 	
@@ -170,153 +171,162 @@ public class BattleUI : MonoBehaviour
 	{
 		switch (choice)
 		{
-		case 1:
-			if (curMenu == PlayerMenu.Choice) 
-			{
-				//Attack description
-				AT = AttackTypes.Direct;
-				MT = MagicTypes.Direct;
-				ChangePanel (PlayerMenu.Description);
-			} 
+			case 1:
+				if (curMenu == PlayerMenu.Choice) 
+				{
+					//Attack description
+					AT = AttackTypes.Direct;
+					MT = MagicTypes.Direct;
+					ChangePanel (PlayerMenu.Target);
+				} 
+				else if (curMenu == PlayerMenu.Skill) 
+				{
+					//Skill 1 used description
+					ChangePanel (PlayerMenu.Magic1);
+				} 	
+				else if (curMenu == PlayerMenu.Magic1) 
+				{
+					
+					ChangePanel (PlayerMenu.Description);
+				}
+				else if (curMenu == PlayerMenu.Magic2) 
+				{
+					ChangePanel (PlayerMenu.Description);
+				}
+				else if (curMenu == PlayerMenu.Special) 
+				{
+					ChangePanel (PlayerMenu.Description);
+				}
+				else if (curMenu == PlayerMenu.Inventory)
+				{
+					//Item 1 used description
+					ChangePanel(PlayerMenu.Description);
+				}
+				else if (curMenu == PlayerMenu.Target)
+				{
+					//Target number 1 used description
+					targetUnit = curChoice - 1; //choose to target the first unit in list
+					ChangePanel(PlayerMenu.Description);
+				}
+				break;
 
-			else if (curMenu == PlayerMenu.Skill) 
-			{
-				//Skill 1 used description
-				ChangePanel (PlayerMenu.Magic1);
-			} 
-			else if (curMenu == PlayerMenu.Magic1) 
-			{
-				//
-				ChangePanel (PlayerMenu.Description);
-			}
-			else if (curMenu == PlayerMenu.Magic2) 
-			{
-				ChangePanel (PlayerMenu.Description);
-			}
-			else if (curMenu == PlayerMenu.Special) 
-			{
-				ChangePanel (PlayerMenu.Description);
-			}
-			else if (curMenu == PlayerMenu.Inventory)
-			{
-				//Item 1 used description
-				ChangePanel(PlayerMenu.Description);
-			}
-			break;
+			case 2:
+				if (curMenu == PlayerMenu.Choice) 
+				{
+					//Attack description
+					ChangePanel (PlayerMenu.Description);
+				} 
+				else if (curMenu == PlayerMenu.Skill) 
+				{
+					//Skill 1 used description
+					ChangePanel (PlayerMenu.Description);
+				} 
+				else if (curMenu == PlayerMenu.Magic1) 
+				{
+					ChangePanel (PlayerMenu.Description);
+				}
+				else if (curMenu == PlayerMenu.Magic2) 
+				{
+					ChangePanel (PlayerMenu.Description);
+				}
+				else if (curMenu == PlayerMenu.Special) 
+				{
+					ChangePanel (PlayerMenu.Description);
+				}
+				else if (curMenu == PlayerMenu.Inventory)
+				{
+					//Item 1 used description
+					ChangePanel(PlayerMenu.Description);
+				}
+				break;
 
-		case 2:
-			if (curMenu == PlayerMenu.Choice) 
-			{
-				//Attack description
-				ChangePanel (PlayerMenu.Description);
-			} 
+			case 3:
+				if (curMenu == PlayerMenu.Choice) 
+				{
+					//Attack description
+					ChangePanel (PlayerMenu.Skill);
+				} 
 
-			else if (curMenu == PlayerMenu.Skill) 
-			{
-				//Skill 1 used description
-				ChangePanel (PlayerMenu.Description);
-			} 
-			else if (curMenu == PlayerMenu.Magic1) 
-			{
-				ChangePanel (PlayerMenu.Description);
-			}
-			else if (curMenu == PlayerMenu.Magic2) 
-			{
-				ChangePanel (PlayerMenu.Description);
-			}
-			else if (curMenu == PlayerMenu.Special) 
-			{
-				ChangePanel (PlayerMenu.Description);
-			}
-			else if (curMenu == PlayerMenu.Inventory)
-			{
-				//Item 1 used description
-				ChangePanel(PlayerMenu.Description);
-			}
-			break;
+				else if (curMenu == PlayerMenu.Skill) 
+				{
+					//Skill 1 used description
+					ChangePanel (PlayerMenu.Choice);
+				} 
+				else if (curMenu == PlayerMenu.Magic1) 
+				{
+					ChangePanel (PlayerMenu.Description);
+				}
+				else if (curMenu == PlayerMenu.Magic2) 
+				{
+					ChangePanel (PlayerMenu.Description);
+				}
+				else if (curMenu == PlayerMenu.Special) 
+				{
+					ChangePanel (PlayerMenu.Choice);
+				}
+				else if (curMenu == PlayerMenu.Inventory)
+				{
+					//Item 1 used description
+					ChangePanel(PlayerMenu.Description);
+				}
+				break;
 
-		case 3:
-			if (curMenu == PlayerMenu.Choice) 
-			{
-				//Attack description
-				ChangePanel (PlayerMenu.Skill);
-			} 
+			case 4:
+				if (curMenu == PlayerMenu.Choice) 
+				{
+					//Attack description
+					ChangePanel (PlayerMenu.Description);
+				} 
+				else if (curMenu == PlayerMenu.Skill) 
+				{
+					//Skill 1 used description
+					ChangePanel (PlayerMenu.Magic1);
+				} 
+				else if (curMenu == PlayerMenu.Magic1) 
+				{
+					ChangePanel (PlayerMenu.Magic2);
+				}
+				else if (curMenu == PlayerMenu.Magic2) 
+				{
+					ChangePanel (PlayerMenu.Description);
+				}
+				else if (curMenu == PlayerMenu.Inventory)
+				{
+					//Item 1 used description
+					ChangePanel(PlayerMenu.Description);
+				}
+				break;
 
-			else if (curMenu == PlayerMenu.Skill) 
-			{
-				//Skill 1 used description
-				ChangePanel (PlayerMenu.Choice);
-			} 
-			else if (curMenu == PlayerMenu.Magic1) 
-			{
-				ChangePanel (PlayerMenu.Description);
-			}
-			else if (curMenu == PlayerMenu.Magic2) 
-			{
-				ChangePanel (PlayerMenu.Description);
-			}
-			else if (curMenu == PlayerMenu.Special) 
-			{
-				ChangePanel (PlayerMenu.Choice);
-			}
-			else if (curMenu == PlayerMenu.Inventory)
-			{
-				//Item 1 used description
-				ChangePanel(PlayerMenu.Description);
-			}
-			break;
-
-		case 4:
-			if (curMenu == PlayerMenu.Choice) 
-			{
-				//Attack description
-				ChangePanel (PlayerMenu.Description);
-			} 
-
-			else if (curMenu == PlayerMenu.Skill) 
-			{
-				//Skill 1 used description
-				ChangePanel (PlayerMenu.Magic1);
-			} 
-			else if (curMenu == PlayerMenu.Magic1) 
-			{
-				ChangePanel (PlayerMenu.Magic2);
-			}
-			else if (curMenu == PlayerMenu.Magic2) 
-			{
-				ChangePanel (PlayerMenu.Description);
-			}
-			else if (curMenu == PlayerMenu.Inventory)
-			{
-				//Item 1 used description
-				ChangePanel(PlayerMenu.Description);
-			}
-			break;
-
-		case 5:
-			if (curMenu == PlayerMenu.Choice) {
-				//Attack description
-				ChangePanel (PlayerMenu.Description);
-			} 
-			else if (curMenu == PlayerMenu.Magic1) {
-				ChangePanel (PlayerMenu.Skill);
-			} 
-			else if (curMenu == PlayerMenu.Magic2) {
-				ChangePanel (PlayerMenu.Magic1);
-			} 
-			else if (curMenu == PlayerMenu.Inventory) {
-				//Item 1 used description
-				ChangePanel (PlayerMenu.Description);
-			}
-			break;
+			case 5:
+				if (curMenu == PlayerMenu.Choice) 
+				{
+					//Attack description
+					ChangePanel (PlayerMenu.Description);
+				} 
+				else if (curMenu == PlayerMenu.Magic1) 
+				{
+					ChangePanel (PlayerMenu.Skill);
+				} 
+				else if (curMenu == PlayerMenu.Magic2)
+				{
+					ChangePanel (PlayerMenu.Magic1);
+				} 
+				else if (curMenu == PlayerMenu.Inventory) 
+				{
+					//Item 1 used description
+					ChangePanel (PlayerMenu.Description);
+				}
+				break;
 		}
 	}
 		
-	public AttackTypes attackType {
+	public AttackTypes attackType 
+	{
 		get{ return AT; }
 	}
 
-	public MagicTypes magicType {
+	public MagicTypes magicType 
+	{
 		get{ return MT; }
 	}
 }

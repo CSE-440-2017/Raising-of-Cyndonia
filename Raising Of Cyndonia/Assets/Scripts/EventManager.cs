@@ -16,7 +16,9 @@ public class EventManager : MonoBehaviour
 	// Use this for initialization
 	void Start() 
 	{
+		//exploreCamera = GameObject.FindGameObjectWithTag("MainCamera");
 		exploreCamera.SetActive(true); //turns on exploring player camera
+		//battleCamera = GameObject.FindGameObjectWithTag("BattleCamera");
 		battleCamera.SetActive(false); //turns off battle camera
 		player = GameObject.FindGameObjectWithTag("Player");
 	}
@@ -36,6 +38,12 @@ public class EventManager : MonoBehaviour
 		Debug.Log(encounteredEnemies.name);
 
 		player.GetComponent<PlayerMove>().inCombat = true; //makes it so player cant move in combat
+
+		for (int i = 0; i < 3; i++)
+		{
+			plPos = Instantiate(player.GetComponent<PlayerInfo>().allParty[i], playerBPosition[i].transform.position, Quaternion.identity) as GameObject; //places enemy in position 2
+			//player.GetComponent<PlayerInfo>().allParty[i].transform.position = playerBPosition[i].transform.position;
+		}
 
 
 		enPos = Instantiate(emptyPos1, enemyBPosition[0].transform.position, Quaternion.identity) as GameObject; //places enemy in position 2

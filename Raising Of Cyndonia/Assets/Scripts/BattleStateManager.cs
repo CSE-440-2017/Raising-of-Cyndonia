@@ -8,8 +8,8 @@ public class BattleStateManager : MonoBehaviour
 	public GameObject player, enemy, playerUnit;
 	//public PlayerParty playerUnit;
 	//public EnemyParty enemyUnit;
-	public List<GameObject> playersUnits = new List<GameObject>();
-	public List<GameObject> enemysUnits = new List<GameObject>();
+	//public List<GameObject> playersUnits = new List<GameObject>();
+	//public List<GameObject> enemysUnits = new List<GameObject>();
 	public int unitNum;
 	public BattleUI bUI;
 
