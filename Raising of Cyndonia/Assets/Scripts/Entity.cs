@@ -8,7 +8,7 @@ using UnityEditor;
 public class Entity : MonoBehaviour 
 {
 	[SerializeField] bool isDead, isPlayer, canAttack, inCombat, canInteract, statusEffect, canRecruit, canRegen, specialAvailable, defenseActive;
-	[SerializeField] int level, hitPoints, magicPoints, skillPoints, hitPointReg, damage, magicDamage, specialDamage, defense, specialUnlock;
+	[SerializeField] int level, maxHitPoints, hitPoints, magicPoints, skillPoints, hitPointReg, damage, magicDamage, specialDamage, defense, specialUnlock;
 	[SerializeField] string name;
 	public Sprite image;
 
@@ -115,6 +115,15 @@ public class Entity : MonoBehaviour
 	{
 		get{ return hitPoints; }
 		set{ hitPoints = value; }
+	}
+
+	//Will be useful for the health bar and level up system
+	//so that way we can alter the health level without changing the
+	//characters current health
+	public int MaxHitPoints 
+	{
+		get{ return maxHitPoints; }
+		set{ maxHitPoints = value; }
 	}
 
 	//See how much magic the entity has

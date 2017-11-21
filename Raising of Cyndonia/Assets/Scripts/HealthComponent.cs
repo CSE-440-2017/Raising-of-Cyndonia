@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthComponent : MonoBehaviour 
 {
 	Entity entInfo; //grabs values from entity script
+	Slider healthBar;
 	int maxHP, currentHP, regenAmount, defenseVal; //values for the gameObjects health or healing
 	bool regenHP, dead, defenseAct; //bool to check if allowed to regen health or is dead
 
@@ -12,13 +14,15 @@ public class HealthComponent : MonoBehaviour
 	{
 		//set all of the values
 		entInfo = gameObject.GetComponent<Entity>();
-		maxHP = entInfo.HitPoints;
+		maxHP = entInfo.MaxHitPoints;
 		regenAmount = entInfo.HitPointReg;
 		defenseVal = entInfo.Defense;
 		regenHP = entInfo.CanRegen;
 		dead = entInfo.IsDead;
 		defenseAct = entInfo.DefenseActive;
-		currentHP = maxHP;
+		currentHP = entInfo.HitPoints;
+		healthBar.value = currentHP;
+		healthBar.maxValue = maxHP;
 	}
 
 	//Update once per frame
@@ -34,18 +38,26 @@ public class HealthComponent : MonoBehaviour
 	//if gameObject is attacked it will take damage
 	public int HealthDamaged(int damage)
 	{
-		//If defense is active then subtract the defense amount from damage
+		//Check to see if defense is active
 		if (defenseAct) {
+			//If defense is active than reduce the damage by the defense value of the entity
 			damage -= defenseVal;
 
-			//If the damage is greater than 0 then subtract the health by damage
-			if (damage > 0)
+			//If the damage is greater than 0 then subtract the amount of damage from player's health
+			//and update the health bar to show the change
+			if (damage > 0) {
 				currentHP -= damage;
+				healthBar.value = currentHP;
+			}
 		} 
 
-		//Else if defense if off then just subtract health by damage 
-		else if(damage > 0)
+		//Else if defense if off then just subtract the amount of damage from player's health and update
+		//the health bar to show the change
+		else if (damage > 0) 
+		{
 			currentHP -= damage;
+			healthBar.value = currentHP;
+		}
 		
 		return currentHP;
 	}
@@ -69,6 +81,7 @@ public class HealthComponent : MonoBehaviour
 	public float Heal(int amount)
 	{
 		currentHP += amount;
+		healthBar.value = currentHP;
 		return currentHP;
 	}
 
