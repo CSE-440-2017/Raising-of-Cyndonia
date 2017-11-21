@@ -35,6 +35,7 @@ public class Entity : MonoBehaviour
 		this.weakness = ent.weakness;
 		this.level = ent.level;
 		this.hitPoints = ent.hitPoints;
+		this.maxHitPoints = ent.maxHitPoints;
 		this.damage = ent.damage;
 		this.magicDamage = ent.magicDamage;
 		this.specialDamage = ent.specialDamage;
