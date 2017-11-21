@@ -16,6 +16,8 @@ public class Entity : MonoBehaviour
 	public CharacterRole role; //what role does the entity have in the game
 	public CharacterWeakness weakness; //The weakness of the entity
 	public CharacterStrength invulnerable; //The strengths of the entity
+	public AttackType attacks;
+	public MagicType magic;
 
 	// Update is called once per frame
 	void Update() 
@@ -200,6 +202,18 @@ public class Entity : MonoBehaviour
 		get{ return invulnerable; }
 		set{ invulnerable = value; }
 	}
+
+	public AttackType Attacks 
+	{
+		get{ return attacks; }
+		set{ attacks = value; }
+	}
+
+	public MagicType Magic 
+	{
+		get{ return magic; }
+		set{ magic = value; }
+	}
 }
 
 public enum CharacterRole
@@ -207,12 +221,22 @@ public enum CharacterRole
 	Mage, Theif, Knight
 }
 
+public enum AttackType
+{
+	Melee, Magic, Special
+}
+
+public enum MagicType
+{
+	Fire, Ice, Thunder, Dark, Light, Wind, Water, Melee
+}
+
 public enum CharacterWeakness
 {
-	Fire, Ice, Thunder, Dark, Light, Wind, Water, Direct
+	Fire, Ice, Thunder, Dark, Light, Wind, Water, Melee
 }
 
 public enum CharacterStrength
 {
-	Fire, Ice, Thunder, Dark, Light, Wind, Water, Direct
+	Fire, Ice, Thunder, Dark, Light, Wind, Water, Melee
 }
