@@ -5,7 +5,7 @@ using UnityEngine;
 public class BattleStateManager : MonoBehaviour 
 {
 	public StatesOfBattle currentState; //state of the battle
-	public GameObject player, enemy, playerUnit; //player, enemy, and the party of player and enemy game objects
+	public GameObject player, enemy, playerUnit, enemyUnit; //player, enemy, and the party of player and enemy game objects
 	//not sure we will be using these yet
 	//public PlayerParty playerUnit; 
 	//public EnemyParty enemyUnit;
@@ -13,6 +13,7 @@ public class BattleStateManager : MonoBehaviour
 	//public List<GameObject> enemysUnits = new List<GameObject>();
 	public int unitNum;
 	public BattleUI bUI;
+	//public EventManager eventM;
 
 	// Use this for initialization
 	void Start() 
@@ -25,7 +26,7 @@ public class BattleStateManager : MonoBehaviour
 	// Update is called once per frame
 	void Update() 
 	{
-		Debug.Log (currentState);
+		//Debug.Log (currentState);
 		switch (currentState)
 		{
 			case (StatesOfBattle.Start):
@@ -37,11 +38,13 @@ public class BattleStateManager : MonoBehaviour
 			case (StatesOfBattle.PlayerTurn): //players turn goes through until all party members have done something
 			
 				//Sets it so that as long as unitNum is less than the list size of the player then the player can chose there choices
-				if(unitNum < player.GetComponent<PlayerInfo>().allParty.Count)
-					playerUnit = player.GetComponent<PlayerInfo>().allParty[unitNum]; //grabs a unit from the players party list
+				if (unitNum > player.GetComponent<PlayerInfo>().allParty.Count - 1)
+				{
+					unitNum = 0; //resets unitNum to 0 for enemy
+					currentState = StatesOfBattle.EnemyTurn; //changes to enemies turn
+				}
+				playerUnit = player.GetComponent<PlayerInfo>().allParty[unitNum]; //grabs a unit from the players party list
 
-				else 
-					currentState = StatesOfBattle.EnemyTurn;
 
 				//bUI.ChangePanel(PlayerMenu.Choice); //the change panels ui for battle based off of the choices input
 				//Debug.Log("Players Turn, Party Member " + unitNum);
@@ -49,7 +52,14 @@ public class BattleStateManager : MonoBehaviour
 				break;
 
 			case (StatesOfBattle.EnemyTurn): //enemies turn goes through until all enemies have done something
-				//enemysUnit = enemy.GetComponent<PlayerInfo>().eParty[unitNum];
+				//Sets it so that as long as unitNum is less than the list size of the enemy then the enemy can chose there choices
+				if (unitNum > gameObject.GetComponent<EventManager>().encounteredEnemies.Count - 1)
+				{
+					unitNum = 0; //resets unitNum to 0 for player
+					currentState = StatesOfBattle.PlayerTurn; //changes to players turn
+				}
+				enemyUnit = gameObject.GetComponent<EventManager>().encounteredEnemies[unitNum]; //grabs a unit from the eventmanager's encounter list
+
 				break;
 
 			case (StatesOfBattle.CalcDamage): //calculates the damage done

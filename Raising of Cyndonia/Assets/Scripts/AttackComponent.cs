@@ -23,7 +23,7 @@ public class AttackComponent : MonoBehaviour {
 	}
 
 	//need to draw this back to the basics in order to just do the attacking and health depletion bars
-	public void Attack(GameObject other)
+	/*public void Attack(GameObject other)
 	{
 		//Get a random percentage to determine how effective the attack will be
 		int dmgPercent = Random.Range (0, 100);
@@ -94,5 +94,5 @@ public class AttackComponent : MonoBehaviour {
 			totalDMG = (int)magicDMG - (int)updatedDMG;//Subtracts the base damage with the updated damge to give proper damage value
 			other.GetComponent<HealthComponent>().HealthDamaged (totalDMG);
 		}
-	}
+	}*/
 }

@@ -18,6 +18,7 @@ public class EventManager : MonoBehaviour
 	// Use this for initialization
 	void Start() 
 	{
+		gameObject.GetComponent<BattleStateManager>().enabled = false;
 		//exploreCamera = GameObject.FindGameObjectWithTag("MainCamera");
 		exploreCamera.SetActive(true); //turns on exploring player camera
 		//battleCamera = GameObject.FindGameObjectWithTag("BattleCamera");
@@ -42,6 +43,10 @@ public class EventManager : MonoBehaviour
 		//Debug.Log(encounteredEnemies.name);
 
 		player.GetComponent<PlayerMove>().inCombat = true; //makes it so player cant move in combat
+		if (player.GetComponent<PlayerMove>().inCombat)
+		{
+			gameObject.GetComponent<BattleStateManager>().enabled = true;
+		}
 
 		for (int i = 0; i < 3; i++)
 		{
@@ -53,6 +58,7 @@ public class EventManager : MonoBehaviour
 				//Debug.Log(encounteredEnemies[whichEnemy].name);
 				//enPos = Instantiate(encounteredEnemies[whichEnemy], enemyBPosition[i].transform.position, Quaternion.identity) as GameObject;
 				Debug.Log(allEnemies[whichEnemy].name); //states what random enemy it is
+				encounteredEnemies[i] = allEnemies[whichEnemy]; 
 				enPos = Instantiate(allEnemies[whichEnemy], enemyBPosition[i].transform.position, Quaternion.identity) as GameObject; //places random enemy in enemy position
 			}
 		}

@@ -10,8 +10,8 @@ public class HealthComponent : MonoBehaviour
 	int maxHP, currentHP, regenAmount, defenseVal; //values for the gameObjects health or healing
 	bool regenHP, dead, defenseAct; //bool to check if allowed to regen health or is dead
 
-	void Awake()
-	{
+	//void Awake()
+	/*{
 		//set all of the values
 		entInfo = gameObject.GetComponent<Entity>();
 		maxHP = entInfo.MaxHitPoints;
@@ -23,7 +23,7 @@ public class HealthComponent : MonoBehaviour
 		currentHP = entInfo.HitPoints;
 		healthBar.value = currentHP;
 		healthBar.maxValue = maxHP;
-	}
+	}*/
 
 	//Update once per frame
 	void Update()
