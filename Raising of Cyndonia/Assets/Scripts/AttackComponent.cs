@@ -49,8 +49,8 @@ public class AttackComponent : MonoBehaviour {
 		} 
 
 		//See if the attack the entity chose is not as effective to the entity they are attacking
-		else if (other.GetComponent<Entity> ().Invulnerable.ToString () == bUI.magicType.ToString ()) {
-			if (entInfo.Attacks.ToString () == "Direct") {
+		else if (other.GetComponent<Entity> ().Invulnerable.ToString () == entInfo.Magic.ToString ()) {
+			if (entInfo.Attacks.ToString () == "Melee") {
 				baseDMG /= 1.5f; //Calculates how much to decrease the base damage 
 				updatedDMG = baseDMG * dmgPercentage; //See how effective the damage will be
 				totalDMG = (int)baseDMG - (int)updatedDMG; //Subtract the base damage from the updated damage to give proper value
@@ -66,7 +66,7 @@ public class AttackComponent : MonoBehaviour {
 		}
 
 		//See if the entity is a knight and using a direct attack and as a result the base attack is boosted
-		else if (entInfo.Attacks.ToString () == "Direct" && entInfo.Role.ToString () == "Knight") {
+		else if (entInfo.Attacks.ToString () == "Melee" && entInfo.Role.ToString () == "Knight") {
 			baseDMG *= 1.5f;//Calculates how much to increase the base damage by
 			updatedDMG = baseDMG * dmgPercentage;//See how effective the damage will be
 			totalDMG = (int)baseDMG - (int)updatedDMG;//Subtracts the base damage with the updated damge to give proper damage value
@@ -82,7 +82,7 @@ public class AttackComponent : MonoBehaviour {
 		}
 
 		//See if the attack is just a direct attack so just do the attack
-		else if (entInfo.Attacks.ToString () == "Direct") {
+		else if (entInfo.Attacks.ToString () == "Melee") {
 			updatedDMG = baseDMG * dmgPercentage;//See how effective the damage will be
 			totalDMG = (int)baseDMG - (int)updatedDMG;//Subtracts the base damage with the updated damge to give proper damage value
 			other.GetComponent<HealthComponent>().HealthDamaged (totalDMG);
