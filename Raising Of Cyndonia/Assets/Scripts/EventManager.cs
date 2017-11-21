@@ -58,7 +58,8 @@ public class EventManager : MonoBehaviour
 				//Debug.Log(encounteredEnemies[whichEnemy].name);
 				//enPos = Instantiate(encounteredEnemies[whichEnemy], enemyBPosition[i].transform.position, Quaternion.identity) as GameObject;
 				Debug.Log(allEnemies[whichEnemy].name); //states what random enemy it is
-				encounteredEnemies[i] = allEnemies[whichEnemy]; 
+				encounteredEnemies.Add(allEnemies[whichEnemy]);
+				//encounteredEnemies[i] = allEnemies[whichEnemy]; 
 				enPos = Instantiate(allEnemies[whichEnemy], enemyBPosition[i].transform.position, Quaternion.identity) as GameObject; //places random enemy in enemy position
 			}
 		}
