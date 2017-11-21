@@ -5,11 +5,18 @@ using UnityEngine.UI;
 
 public class BattleUI : MonoBehaviour 
 {
+	Entity entInfo;
 	public PlayerMenu curMenu; //current menu player is on
 	public GameObject choices, skills, invent, party, descrip, target; //different panels
+	public GameObject targetChoice; //The choice for the target to attack
 	//public Text attack, skill, inventory, escape, skill1, skill2, skill3, skill4; //different text
 	public int curChoice, targetUnit; //input key for choosing
 	public BattleStateManager BSM;
+
+	void Awake()
+	{
+		entInfo = gameObject.GetComponent<Entity> ();
+	}
 			
 	// Use this for initialization
 	void Start() 
@@ -108,7 +115,7 @@ public class BattleUI : MonoBehaviour
 		{
 			case 1:
 				if (curMenu == PlayerMenu.Choice) 
-				{					
+				{
 					ChangePanel (PlayerMenu.Target);
 				} 
 				else if (curMenu == PlayerMenu.Skill) 

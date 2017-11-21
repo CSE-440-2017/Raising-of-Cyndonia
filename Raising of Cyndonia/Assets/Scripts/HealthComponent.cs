@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class HealthComponent : MonoBehaviour 
 {
 	Entity entInfo; //grabs values from entity script
-	Slider healthBar;
+	public Slider healthBar;
 	int maxHP, currentHP, regenAmount, defenseVal; //values for the gameObjects health or healing
 	bool regenHP, dead, defenseAct; //bool to check if allowed to regen health or is dead
 
