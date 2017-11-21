@@ -18,14 +18,14 @@ public class BattleStateManager : MonoBehaviour
 	void Start() 
 	{
 		unitNum = 0; //which unit will be going
-		player = GameObject.FindGameObjectWithTag("Player"); //sets up the player will have a setup for enemy aswell
+		player = GameObject.FindGameObjectWithTag("Player"); //sets up the player will have a setup for enemy as well
 		currentState = StatesOfBattle.Start; //sets the current state to start
-
 	}
 	
 	// Update is called once per frame
 	void Update() 
 	{
+		Debug.Log (currentState);
 		switch (currentState)
 		{
 			case (StatesOfBattle.Start):
@@ -35,7 +35,14 @@ public class BattleStateManager : MonoBehaviour
 				break;
 
 			case (StatesOfBattle.PlayerTurn): //players turn goes through until all party members have done something
-				playerUnit = player.GetComponent<PlayerInfo>().allParty[unitNum]; //grabs a unit from the players party list
+			
+				//Sets it so that as long as unitNum is less than the list size of the player then the player can chose there choices
+				if(unitNum < player.GetComponent<PlayerInfo>().allParty.Count)
+					playerUnit = player.GetComponent<PlayerInfo>().allParty[unitNum]; //grabs a unit from the players party list
+
+				else 
+					currentState = StatesOfBattle.EnemyTurn;
+
 				//bUI.ChangePanel(PlayerMenu.Choice); //the change panels ui for battle based off of the choices input
 				//Debug.Log("Players Turn, Party Member " + unitNum);
 
