@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 2002f49f8e4d8344a91c51c6dc4aadf6
-timeCreated: 1511837371
+timeCreated: 1511904820
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -359,7 +359,7 @@ TextureImporter:
     21300704: Wild_West_B_Prairie_352
     21300706: Wild_West_B_Prairie_353
     21300708: Wild_West_B_Prairie_354
-    21300710: Wild_West_B_Prairie_355
+    21300710: Fireplace
     21300712: Wild_West_B_Prairie_356
     21300714: Wild_West_B_Prairie_357
     21300716: Wild_West_B_Prairie_358
@@ -5525,13 +5525,13 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Wild_West_B_Prairie_355
+      name: Fireplace
       rect:
         serializedVersion: 2
         x: 160
-        y: 304
-        width: 16
-        height: 16
+        y: 286
+        width: 34
+        height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
