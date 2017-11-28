@@ -58,7 +58,8 @@ public class HealthComponent : MonoBehaviour
 			currentHP -= damage;
 			//healthBar.value = currentHP;
 		}
-		Debug.Log(currentHP);
+		Debug.Log(gameObject);
+		Debug.Log("objects health " + currentHP);
 		//entInfo.HitPoints = currentHP;
 		return currentHP;
 	}

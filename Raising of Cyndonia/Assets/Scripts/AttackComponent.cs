@@ -36,10 +36,9 @@ public class AttackComponent : MonoBehaviour {
 
 		playerAttack = entInfo.Attacks;
 		baseDMG = entInfo.Damage;
-		Debug.Log(" Base " + baseDMG);
 		magicDMG = entInfo.MagicDamage;
 		specDMG = entInfo.SpecialDamage; 
-		Debug.Log("The Base Damage in Attack" + baseDMG);
+		Debug.Log("The Base Damage in Attack " + baseDMG);
 		Debug.Log(gameObject);
 		//Get a random percentage to determine how effective the attack will be
 		float dmgPercent = Random.Range (0, 100);
@@ -103,7 +102,6 @@ public class AttackComponent : MonoBehaviour {
 			//if (gameObject.Attacks == AttackType.Melee) {
 			updatedDMG = baseDMG * dmgPercentage;//See how effective the damage will be
 			Debug.Log("base " + baseDMG);
-			Debug.Log("dmg percent " + dmgPercentage);
 			Debug.Log("updated " + updatedDMG);
 			totalDMG = (int)baseDMG - (int)updatedDMG;//Subtracts the base damage with the updated damge to give proper damage value
 			Debug.Log("total dmg " + totalDMG);
