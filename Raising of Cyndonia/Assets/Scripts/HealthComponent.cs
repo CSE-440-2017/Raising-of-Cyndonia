@@ -58,8 +58,8 @@ public class HealthComponent : MonoBehaviour
 			currentHP -= damage;
 			//healthBar.value = currentHP;
 		}
-
-		entInfo.HitPoints = currentHP;
+		Debug.Log(currentHP);
+		//entInfo.HitPoints = currentHP;
 		return currentHP;
 	}
 
