@@ -219,10 +219,20 @@ public class BattleUI : MonoBehaviour
 				break;
 		}
 	}
+
+	public int Target 
+	{
+		get{ return targetUnit; }
+	}
+
+	public PlayerMenu CurMenu 
+	{
+		get{ return curMenu; }
+	}
 }
 
 //player menu panels
 public enum PlayerMenu
 {
-	Choice, Attack, Skill, Inventory, Description, Target
+	Choice, Target, Skill, Inventory, Description
 }

@@ -6,12 +6,12 @@ using UnityEngine.UI;
 public class HealthComponent : MonoBehaviour 
 {
 	Entity entInfo; //grabs values from entity script
-	public Slider healthBar;
-	int maxHP, currentHP, regenAmount, defenseVal; //values for the gameObjects health or healing
+	//public Slider healthBar;
+	public int maxHP, currentHP, regenAmount, defenseVal; //values for the gameObjects health or healing
 	bool regenHP, dead, defenseAct; //bool to check if allowed to regen health or is dead
 
-	//void Awake()
-	/*{
+	void Awake()
+	{
 		//set all of the values
 		entInfo = gameObject.GetComponent<Entity>();
 		maxHP = entInfo.MaxHitPoints;
@@ -21,9 +21,9 @@ public class HealthComponent : MonoBehaviour
 		dead = entInfo.IsDead;
 		defenseAct = entInfo.DefenseActive;
 		currentHP = entInfo.HitPoints;
-		healthBar.value = currentHP;
-		healthBar.maxValue = maxHP;
-	}*/
+		//healthBar.value = currentHP;
+		//healthBar.maxValue = maxHP;
+	}
 
 	//Update once per frame
 	void Update()
@@ -47,7 +47,7 @@ public class HealthComponent : MonoBehaviour
 			//and update the health bar to show the change
 			if (damage > 0) {
 				currentHP -= damage;
-				healthBar.value = currentHP;
+				//healthBar.value = currentHP;
 			}
 		} 
 
@@ -56,9 +56,10 @@ public class HealthComponent : MonoBehaviour
 		else if (damage > 0) 
 		{
 			currentHP -= damage;
-			healthBar.value = currentHP;
+			//healthBar.value = currentHP;
 		}
-		
+
+		entInfo.HitPoints = currentHP;
 		return currentHP;
 	}
 
@@ -81,7 +82,8 @@ public class HealthComponent : MonoBehaviour
 	public float Heal(int amount)
 	{
 		currentHP += amount;
-		healthBar.value = currentHP;
+		//healthBar.value = currentHP;
+		entInfo.HitPoints = currentHP;
 		return currentHP;
 	}
 

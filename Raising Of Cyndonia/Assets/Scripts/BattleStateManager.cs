@@ -38,12 +38,28 @@ public class BattleStateManager : MonoBehaviour
 			case (StatesOfBattle.PlayerTurn): //players turn goes through until all party members have done something
 			
 				//Sets it so that as long as unitNum is less than the list size of the player then the player can chose there choices
-				if (unitNum > player.GetComponent<PlayerInfo>().allParty.Count - 1)
-				{
+				if (unitNum > player.GetComponent<PlayerInfo> ().allParty.Count - 1) {
 					unitNum = 0; //resets unitNum to 0 for enemy
 					currentState = StatesOfBattle.EnemyTurn; //changes to enemies turn
+				} 
+
+				else 
+				{
+					playerUnit = player.GetComponent<PlayerInfo> ().allParty [unitNum]; //grabs a unit from the players party list
+					
+					//These two if else statements are supposed to define what type of attack the player is going to do
+					if (bUI.CurMenu == PlayerMenu.Target)//Need to update this for just melee attack this is just for testing
+						playerUnit.GetComponent<Entity> ().Attacks = AttackType.Melee;
+					else if (bUI.CurMenu == PlayerMenu.Skill)
+						playerUnit.GetComponent<Entity> ().Attacks = AttackType.Magic;
+					
+					//The only way the attack script will activate is if the script is in the description menu and the player has an attack set to it
+					if (bUI.CurMenu == PlayerMenu.Description && (playerUnit.GetComponent<Entity> ().Attacks == AttackType.Melee || playerUnit.GetComponent<Entity> ().Attacks == AttackType.Magic)) {
+						enemy = gameObject.GetComponent<EventManager> ().encounteredEnemies [bUI.Target]; //Get the target the player will attack
+						playerUnit.GetComponent<AttackComponent> ().Attack (enemy); //Deal damage to the enemy
+						playerUnit.GetComponent<Entity> ().Attacks = AttackType.None; //Reset the attack type to nothing so that this statement doesn't execute again
+					}
 				}
-				playerUnit = player.GetComponent<PlayerInfo>().allParty[unitNum]; //grabs a unit from the players party list
 
 
 				//bUI.ChangePanel(PlayerMenu.Choice); //the change panels ui for battle based off of the choices input

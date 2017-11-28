@@ -218,12 +218,12 @@ public class Entity : MonoBehaviour
 
 public enum CharacterRole
 {
-	Mage, Theif, Knight
+	Mage, Theif, Knight, None
 }
 
 public enum AttackType
 {
-	Melee, Magic, Special
+	Melee, Magic, Special, None
 }
 
 public enum MagicType

@@ -23,14 +23,14 @@ public class AttackComponent : MonoBehaviour {
 	}
 
 	//need to draw this back to the basics in order to just do the attacking and health depletion bars
-	/*public void Attack(GameObject other)
+	public void Attack(GameObject other)
 	{
 		//Get a random percentage to determine how effective the attack will be
 		int dmgPercent = Random.Range (0, 100);
 		float dmgPercentage = dmgPercent / 100;
 
 		//See if the attack the entity chose is a weakness of the entity they are attacking
-		if (other.GetComponent<Entity> ().Weakness.ToString () == entInfo.Magic.ToString ()) {
+		/*if (other.GetComponent<Entity> ().Weakness.ToString () == entInfo.Magic.ToString ()) {
 			//See if the attack is a direct attack then increase the base damage by 1.5 and then attack the entity 
 			if (entInfo.Attacks.ToString () == "Melee") {
 				baseDMG *= 1.5f; //Calculates how much to increase the base damage to
@@ -79,20 +79,20 @@ public class AttackComponent : MonoBehaviour {
 			updatedDMG = magicDMG * dmgPercentage;//See how effective the damage will be
 			totalDMG = (int)magicDMG - (int)updatedDMG;//Subtracts the base damage with the updated damge to give proper damage value
 			other.GetComponent<HealthComponent>().HealthDamaged (totalDMG);
-		}
+		}*/
 
 		//See if the attack is just a direct attack so just do the attack
-		else if (entInfo.Attacks.ToString () == "Melee") {
+		if (entInfo.Attacks == AttackType.Melee) {
 			updatedDMG = baseDMG * dmgPercentage;//See how effective the damage will be
 			totalDMG = (int)baseDMG - (int)updatedDMG;//Subtracts the base damage with the updated damge to give proper damage value
 			other.GetComponent<HealthComponent>().HealthDamaged (totalDMG);
 		} 
 
 		//See if the attack is a magic attack and if so then just do the attack
-		else if (entInfo.Attacks.ToString () == "Magic") {
+		else if (entInfo.Attacks == AttackType.Magic) {
 			updatedDMG = magicDMG * dmgPercentage;//See how effective the damage will be
 			totalDMG = (int)magicDMG - (int)updatedDMG;//Subtracts the base damage with the updated damge to give proper damage value
 			other.GetComponent<HealthComponent>().HealthDamaged (totalDMG);
 		}
-	}*/
+	}
 }
