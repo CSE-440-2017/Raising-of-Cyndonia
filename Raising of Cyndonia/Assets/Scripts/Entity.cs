@@ -4,12 +4,11 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEditor;
 
-[System.Serializable]
 public class Entity : MonoBehaviour 
 {
 	[SerializeField] bool isDead, isPlayer, canAttack, inCombat, canInteract, statusEffect, canRecruit, canRegen, specialAvailable, defenseActive;
-	[SerializeField] int level, maxHitPoints, hitPoints, magicPoints, skillPoints, hitPointReg, damage, magicDamage, specialDamage, defense, specialUnlock;
-	[SerializeField] string name;
+	[SerializeField] public int level, maxHitPoints, hitPoints, magicPoints, skillPoints, hitPointReg, damage, magicDamage, specialDamage, defense, specialUnlock;
+	[SerializeField] public string name;
 	public Sprite image;
 
 	public RandomEncounter chanceEncounter; //chance that the enemy can be encountered
@@ -154,7 +153,7 @@ public class Entity : MonoBehaviour
 	public int Damage 
 	{
 		get{ return damage; }
-		set{ damage = value; }
+		//set{ damage = value; }
 	}
 
 	//See how much base level magic attack damage the entity can do

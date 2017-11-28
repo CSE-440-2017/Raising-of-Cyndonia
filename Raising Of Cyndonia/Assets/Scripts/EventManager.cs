@@ -14,6 +14,7 @@ public class EventManager : MonoBehaviour
 
 	public Transform[] enemyBPosition; //the positions enemies can be in
 	public Transform[] playerBPosition; //the positions the player's party can be in
+	float time = 2;
 
 	// Use this for initialization
 	void Start() 

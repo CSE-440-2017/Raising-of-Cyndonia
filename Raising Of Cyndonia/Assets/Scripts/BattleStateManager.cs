@@ -13,6 +13,7 @@ public class BattleStateManager : MonoBehaviour
 	//public List<GameObject> enemysUnits = new List<GameObject>();
 	public int unitNum;
 	public BattleUI bUI;
+	float time = 2;
 	//public EventManager eventM;
 
 	// Use this for initialization
@@ -26,12 +27,19 @@ public class BattleStateManager : MonoBehaviour
 	// Update is called once per frame
 	void Update() 
 	{
+		//player = GameObject.FindGameObjectWithTag("Player");
+
 		//Debug.Log (currentState);
 		switch (currentState)
 		{
 			case (StatesOfBattle.Start):
 				//setup battle function
 				bUI.ChangePanel(PlayerMenu.Choice);
+				/*if (time <= 0)
+				{
+					time = 2;
+					currentState = StatesOfBattle.PlayerTurn;
+				}*/
 				currentState = StatesOfBattle.PlayerTurn;
 				break;
 

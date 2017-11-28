@@ -13,7 +13,7 @@ public class AttackComponent : MonoBehaviour {
 	[SerializeField] AttackType playerAttack;
 	//Entity entInfo = gameObject.GetComponent <Entity> ();
 
-	void Start()
+	/*void Start()
 	{
 		entInfo = gameObject.GetComponent <Entity> ();
 		HC = gameObject.GetComponent <HealthComponent> ();
@@ -24,11 +24,22 @@ public class AttackComponent : MonoBehaviour {
 		Debug.Log(" Base " + baseDMG);
 		magicDMG = entInfo.MagicDamage;
 		specDMG = entInfo.SpecialDamage; 
-	}
+	}*/
 
 	//need to draw this back to the basics in order to just do the attacking and health depletion bars
 	public void Attack(GameObject other)
 	{
+		entInfo = gameObject.GetComponent<Entity>(); //The gameObjects Entity
+		baseDMG = entInfo.Damage; //gameObjects base damage
+		HC = gameObject.GetComponent <HealthComponent> (); //gameObjects health
+		//bUI = gameObject.GetComponent <BattleUI> (); //gameObjects bUI
+
+		playerAttack = entInfo.Attacks;
+		baseDMG = entInfo.Damage;
+		Debug.Log(" Base " + baseDMG);
+		magicDMG = entInfo.MagicDamage;
+		specDMG = entInfo.SpecialDamage; 
+		Debug.Log("The Base Damage in Attack" + baseDMG);
 		Debug.Log(gameObject);
 		//Get a random percentage to determine how effective the attack will be
 		float dmgPercent = Random.Range (0, 100);
@@ -87,8 +98,9 @@ public class AttackComponent : MonoBehaviour {
 		}*/
 
 		//See if the attack is just a direct attack so just do the attack
-		if (playerAttack == AttackType.Melee) {
-		//if (gameObject.Attacks == AttackType.Melee) {
+		if (playerAttack == AttackType.Melee) 
+		{
+			//if (gameObject.Attacks == AttackType.Melee) {
 			updatedDMG = baseDMG * dmgPercentage;//See how effective the damage will be
 			Debug.Log("base " + baseDMG);
 			Debug.Log("dmg percent " + dmgPercentage);
@@ -100,10 +112,12 @@ public class AttackComponent : MonoBehaviour {
 		} 
 
 		//See if the attack is a magic attack and if so then just do the attack
-		else if (playerAttack == AttackType.Magic) {
+		else if (playerAttack == AttackType.Magic) 
+		{
 			updatedDMG = magicDMG * dmgPercentage;//See how effective the damage will be
 			totalDMG = (int)magicDMG - (int)updatedDMG;//Subtracts the base damage with the updated damge to give proper damage value
 			other.GetComponent<HealthComponent>().HealthDamaged (totalDMG);
 		}
 	}
 }
+
