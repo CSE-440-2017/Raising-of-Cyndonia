@@ -105,8 +105,9 @@ public class AttackComponent : MonoBehaviour {
 			Debug.Log("updated " + updatedDMG);
 			totalDMG = (int)baseDMG - (int)updatedDMG;//Subtracts the base damage with the updated damge to give proper damage value
 			Debug.Log("total dmg " + totalDMG);
-			other.GetComponent<HealthComponent>().HealthDamaged (totalDMG);
 			Debug.Log(other);
+			other.GetComponent<HealthComponent>().HealthDamaged (totalDMG);
+
 		} 
 
 		//See if the attack is a magic attack and if so then just do the attack

@@ -61,6 +61,7 @@ public class HealthComponent : MonoBehaviour
 		Debug.Log(gameObject);
 		Debug.Log("objects health " + currentHP);
 		//entInfo.HitPoints = currentHP;
+		Health();
 		return currentHP;
 	}
 
@@ -72,6 +73,7 @@ public class HealthComponent : MonoBehaviour
 	//returns health or if zero then calls Die function
 	public float Health()
 	{
+		Debug.Log("Current Targets HP: " + currentHP);
 		if (currentHP <= 0)
 		{
 			Die();
