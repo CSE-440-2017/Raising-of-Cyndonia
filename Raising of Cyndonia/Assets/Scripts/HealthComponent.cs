@@ -94,8 +94,13 @@ public class HealthComponent : MonoBehaviour
 	public bool Die()
 	{
 		dead = true;
+		RemoveFromList();
 		Destroy(gameObject); //destroys gameObject if dead
 		return dead;
 	}
 
+	void RemoveFromList()
+	{
+		GameObject.FindGameObjectWithTag("EventManager").GetComponent<EventManager>().RemoveObject(gameObject);
+	}
 }

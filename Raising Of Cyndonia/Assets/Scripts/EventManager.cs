@@ -14,7 +14,6 @@ public class EventManager : MonoBehaviour
 
 	public Transform[] enemyBPosition; //the positions enemies can be in
 	public Transform[] playerBPosition; //the positions the player's party can be in
-	float time = 2;
 
 	// Use this for initialization
 	void Start() 
@@ -51,17 +50,18 @@ public class EventManager : MonoBehaviour
 
 		for (int i = 0; i < 3; i++)
 		{
-			plPos = Instantiate(player.GetComponent<PlayerInfo>().allParty[i], playerBPosition[i].transform.position, Quaternion.identity) as GameObject; //places enemy in position 2
-			//player.GetComponent<PlayerInfo>().allParty[i].transform.position = playerBPosition[i].transform.position;
+			//plPos = Instantiate(player.GetComponent<PlayerInfo>().allParty[i], playerBPosition[i].transform.position, Quaternion.identity) as GameObject; //places enemy in position 2
+			player.GetComponent<PlayerInfo>().allParty[i].transform.position = playerBPosition[i].transform.position;
 			if (i <= numberOfEnemies)
 			{		
 				whichEnemy = Random.Range(0, 5); //roles a random number of which random enemy in list
 				//Debug.Log(encounteredEnemies[whichEnemy].name);
 				//enPos = Instantiate(encounteredEnemies[whichEnemy], enemyBPosition[i].transform.position, Quaternion.identity) as GameObject;
 				Debug.Log(allEnemies[whichEnemy].name); //states what random enemy it is
-				encounteredEnemies.Add(allEnemies[whichEnemy]);
+				//encounteredEnemies.Add(allEnemies[whichEnemy]);
 				//encounteredEnemies[i] = allEnemies[whichEnemy]; 
 				enPos = Instantiate(allEnemies[whichEnemy], enemyBPosition[i].transform.position, Quaternion.identity) as GameObject; //places random enemy in enemy position
+				encounteredEnemies.Add(enPos);			
 			}
 		}
 
@@ -78,6 +78,13 @@ public class EventManager : MonoBehaviour
 		*/
 
 	}
+
+	public void RemoveObject(GameObject enemy)
+	{
+		encounteredEnemies.Remove(enemy);
+	}
+
+
 
 	//below is used for if there is an encounter rate for each gameObject
 

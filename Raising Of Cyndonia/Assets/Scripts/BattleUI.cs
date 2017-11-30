@@ -132,13 +132,13 @@ public class BattleUI : MonoBehaviour
 				{
 					//Changes back to choice if next party member
 					ChangePanel(PlayerMenu.Choice);
+					++BSM.unitNum; //go to the next units turn
 				}
 				else if (curMenu == PlayerMenu.Target)
 				{
 					//Target number 1 used description
 					targetUnit = curChoice - 1; //choose to target the first unit in list
 					ChangePanel(PlayerMenu.Description);
-					++BSM.unitNum; //go to the next units turn
 				}
 				break;
 
@@ -163,7 +163,6 @@ public class BattleUI : MonoBehaviour
 					//Target number 2 used description
 					targetUnit = curChoice - 1; //choose to target the first unit in list
 					ChangePanel(PlayerMenu.Description);
-					++BSM.unitNum;//go to the next units turn
 				}
 				break;
 
@@ -189,7 +188,6 @@ public class BattleUI : MonoBehaviour
 					//Target number 3 used description
 					targetUnit = curChoice - 1; //choose to target the first unit in list
 					ChangePanel(PlayerMenu.Description);
-					++BSM.unitNum; //go to the next units turn
 				}
 				break;
 
@@ -214,7 +212,6 @@ public class BattleUI : MonoBehaviour
 					//Target number 4 used description
 					targetUnit = curChoice - 1; //choose to target the first unit in list
 					ChangePanel(PlayerMenu.Description);
-					++BSM.unitNum; //go to the next units turn
 				}
 				break;
 		}

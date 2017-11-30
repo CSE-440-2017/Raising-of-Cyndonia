@@ -38,12 +38,12 @@ public class AttackComponent : MonoBehaviour {
 		baseDMG = entInfo.Damage;
 		magicDMG = entInfo.MagicDamage;
 		specDMG = entInfo.SpecialDamage; 
-		Debug.Log("The Base Damage in Attack " + baseDMG);
-		Debug.Log(gameObject);
+		//Debug.Log("The Base Damage in Attack " + baseDMG);
+		//Debug.Log(gameObject);
 		//Get a random percentage to determine how effective the attack will be
 		float dmgPercent = Random.Range (0, 100);
 		float dmgPercentage = dmgPercent / 100;
-		Debug.Log("DMG Percent" + dmgPercentage);
+		//Debug.Log("DMG Percent" + dmgPercentage);
 		//See if the attack the entity chose is a weakness of the entity they are attacking
 		/*if (other.GetComponent<Entity> ().Weakness.ToString () == entInfo.Magic.ToString ()) {
 			//See if the attack is a direct attack then increase the base damage by 1.5 and then attack the entity 
@@ -101,10 +101,10 @@ public class AttackComponent : MonoBehaviour {
 		{
 			//if (gameObject.Attacks == AttackType.Melee) {
 			updatedDMG = baseDMG * dmgPercentage;//See how effective the damage will be
-			Debug.Log("base " + baseDMG);
-			Debug.Log("updated " + updatedDMG);
+			//Debug.Log("base " + baseDMG);
+			//Debug.Log("updated " + updatedDMG);
 			totalDMG = (int)baseDMG - (int)updatedDMG;//Subtracts the base damage with the updated damge to give proper damage value
-			Debug.Log("total dmg " + totalDMG);
+			//Debug.Log("total dmg " + totalDMG);
 			Debug.Log(other);
 			other.GetComponent<HealthComponent>().HealthDamaged (totalDMG);
 
@@ -115,7 +115,7 @@ public class AttackComponent : MonoBehaviour {
 		{
 			updatedDMG = magicDMG * dmgPercentage;//See how effective the damage will be
 			totalDMG = (int)magicDMG - (int)updatedDMG;//Subtracts the base damage with the updated damge to give proper damage value
-			other.GetComponent<HealthComponent>().HealthDamaged (totalDMG);
+			other.GetComponent<HealthComponent>().HealthDamaged(totalDMG);
 		}
 	}
 }
