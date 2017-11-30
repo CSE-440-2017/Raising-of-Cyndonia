@@ -17,6 +17,11 @@ public class PlayerInfo : MonoBehaviour
 	{
 		
 	}
+
+	public void RemoveParty(GameObject partyMember)
+	{
+		allParty.Remove(partyMember);
+	}
 }
 
 //players party and skills they have not sure if this will be used

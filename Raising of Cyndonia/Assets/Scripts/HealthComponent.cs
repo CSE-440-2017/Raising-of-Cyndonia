@@ -101,6 +101,13 @@ public class HealthComponent : MonoBehaviour
 
 	void RemoveFromList()
 	{
-		GameObject.FindGameObjectWithTag("EventManager").GetComponent<EventManager>().RemoveObject(gameObject);
+		if (gameObject.GetComponent<Entity>().IsPlayer == true)
+		{
+			GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInfo>().RemoveParty(gameObject);
+		}
+		else
+		{
+			GameObject.FindGameObjectWithTag("EventManager").GetComponent<EventManager>().RemoveEnemy(gameObject);
+		}
 	}
 }

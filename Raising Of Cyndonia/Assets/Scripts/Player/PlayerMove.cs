@@ -28,6 +28,10 @@ public class PlayerMove : MonoBehaviour
 	// Update is called once per frame
 	void Update() 
 	{
+		if (Input.GetKey(KeyCode.Escape))
+		{
+			Application.Quit();
+		}
 		if (!isMoving && !inCombat) 
 		{
 			//gets the wasd keys and such to allow player to move

@@ -11,6 +11,7 @@ public class EventManager : MonoBehaviour
 	//public GameObject tempEnt, 
 	public List<GameObject> encounteredEnemies = new List<GameObject>(); //temp game object was using to switch goblins and mess with
 	BattleUI bUI; //battle UI
+	[SerializeField] bool isBoss;
 
 	public Transform[] enemyBPosition; //the positions enemies can be in
 	public Transform[] playerBPosition; //the positions the player's party can be in
@@ -34,6 +35,7 @@ public class EventManager : MonoBehaviour
 
 	public void BattleStart(RandomEncounter rEncounter)
 	{
+		//isBoss = GameObject.FindGameObjectWithTag("Boss").GetComponent<EncounterInstance>().BossStage;
 		numberOfEnemies = Random.Range(0, 3); //roles a random number between 0-2 on how many enemies you will encounter where 0 = 1
 
 		exploreCamera.SetActive(false); //sets exploration player camera off
@@ -52,7 +54,13 @@ public class EventManager : MonoBehaviour
 		{
 			//plPos = Instantiate(player.GetComponent<PlayerInfo>().allParty[i], playerBPosition[i].transform.position, Quaternion.identity) as GameObject; //places enemy in position 2
 			player.GetComponent<PlayerInfo>().allParty[i].transform.position = playerBPosition[i].transform.position;
-			if (i <= numberOfEnemies)
+
+			if (GameObject.FindGameObjectWithTag("Boss").GetComponent<EncounterInstance>().BossStage == true)
+			{
+				enPos = Instantiate(allEnemies[i], enemyBPosition[i].transform.position, Quaternion.identity) as GameObject; //places random enemy in enemy position
+				encounteredEnemies.Add(enPos); //adds Boss to list
+			}
+			else if (i <= numberOfEnemies)
 			{		
 				whichEnemy = Random.Range(0, 5); //roles a random number of which random enemy in list
 				//Debug.Log(encounteredEnemies[whichEnemy].name);
@@ -61,7 +69,7 @@ public class EventManager : MonoBehaviour
 				//encounteredEnemies.Add(allEnemies[whichEnemy]);
 				//encounteredEnemies[i] = allEnemies[whichEnemy]; 
 				enPos = Instantiate(allEnemies[whichEnemy], enemyBPosition[i].transform.position, Quaternion.identity) as GameObject; //places random enemy in enemy position
-				encounteredEnemies.Add(enPos);			
+				encounteredEnemies.Add(enPos);	//adds random range of enemies to list		
 			}
 		}
 
@@ -79,7 +87,15 @@ public class EventManager : MonoBehaviour
 
 	}
 
-	public void RemoveObject(GameObject enemy)
+	public void ExitBattle()
+	{
+		gameObject.GetComponent<BattleStateManager>().enabled = false;
+		exploreCamera.SetActive(true); //turns on exploring player camera
+		battleCamera.SetActive(false); //turns off battle camera
+		player.GetComponent<PlayerMove>().inCombat = false; //makes it so player can move outside of combat
+	}
+
+	public void RemoveEnemy(GameObject enemy)
 	{
 		encounteredEnemies.Remove(enemy);
 	}

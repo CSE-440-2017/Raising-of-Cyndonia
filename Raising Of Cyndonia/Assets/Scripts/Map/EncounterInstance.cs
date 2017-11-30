@@ -9,7 +9,7 @@ public class EncounterInstance : MonoBehaviour
 	GameObject player;
 	private EventManager eMan;
 	[SerializeField] float comChance, uncomChance, epicChance, encoChance;
-
+	[SerializeField] bool bossStage;
 	// Use this for initialization
 	void Start()
 	{
@@ -58,6 +58,12 @@ public class EncounterInstance : MonoBehaviour
 				}
 			}
 		}
+	}
+
+	public bool BossStage 
+	{
+		get{ return bossStage; }
+		set{ bossStage = value; }
 	}
 
 }

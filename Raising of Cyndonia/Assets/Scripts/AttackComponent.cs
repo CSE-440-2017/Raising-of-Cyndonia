@@ -10,13 +10,12 @@ public class AttackComponent : MonoBehaviour {
 	[SerializeField] float baseDMG, magicDMG, specDMG, updatedDMG;
 	[SerializeField] int totalDMG;
 	[SerializeField] AttackType playerAttack;
-	//Entity entInfo = gameObject.GetComponent <Entity> ();
 
 	void Start()
 	{
+		//copies all entity info needed for attack calculations
 		entInfo = gameObject.GetComponent <Entity> ();
 		HC = gameObject.GetComponent <HealthComponent> ();
-
 		playerAttack = entInfo.Attacks;
 		baseDMG = entInfo.Damage;
 		Debug.Log(" Base " + baseDMG);
@@ -27,7 +26,7 @@ public class AttackComponent : MonoBehaviour {
 	//need to draw this back to the basics in order to just do the attacking and health depletion bars
 	public void Attack(GameObject other)
 	{
-		
+		baseDMG = entInfo.Damage;
 		//Get a random percentage to determine how effective the attack will be
 		float dmgPercent = Random.Range (0, 100);
 		float dmgPercentage = dmgPercent / 100;

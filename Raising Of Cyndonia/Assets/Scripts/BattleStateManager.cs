@@ -27,7 +27,14 @@ public class BattleStateManager : MonoBehaviour
 	void Update() 
 	{
 		//player = GameObject.FindGameObjectWithTag("Player");
-
+		if (gameObject.GetComponent<EventManager>().encounteredEnemies.Count <= 0)
+		{
+			currentState = StatesOfBattle.Win;
+		}
+		else if (player.GetComponent<PlayerInfo>().allParty.Count <= 0)
+		{
+			currentState = StatesOfBattle.Lose;
+		}
 		//Debug.Log (currentState);
 		switch (currentState)
 		{
@@ -68,10 +75,6 @@ public class BattleStateManager : MonoBehaviour
 						playerUnit.GetComponent<Entity>().Attacks = AttackType.None; //Reset the attack type to nothing so that this statement doesn't execute again
 					}
 				}
-
-				//bUI.ChangePanel(PlayerMenu.Choice); //the change panels ui for battle based off of the choices input
-				//Debug.Log("Players Turn, Party Member " + unitNum);
-
 				break;
 
 			case (StatesOfBattle.EnemyTurn): //enemies turn goes through until all enemies have done something
@@ -93,10 +96,10 @@ public class BattleStateManager : MonoBehaviour
 					{
 						enemyUnit.GetComponent<Entity>().Attacks = AttackType.Magic;
 					}
-					//The only way the attack script will activate is if the script is in the description menu and the player has an attack set to it
+					//The only way the attack script will activate is if the script is in the description menu and the enemy has an attack set to it
 					if (bUI.CurMenu == PlayerMenu.Description && ((enemyUnit.GetComponent<Entity>().Attacks == AttackType.Melee) || (enemyUnit.GetComponent<Entity>().Attacks == AttackType.Magic)))
 					{
-						enemyUnit.GetComponent<AttackComponent>().Attack(player.GetComponent<PlayerInfo>().allParty[bUI.Target]); //Deal damage to the enemy
+						enemyUnit.GetComponent<AttackComponent>().Attack(player.GetComponent<PlayerInfo>().allParty[bUI.Target]); //Deal damage to the player
 						enemyUnit.GetComponent<Entity>().Attacks = AttackType.None; //Reset the attack type to nothing so that this statement doesn't execute again
 					}
 				}
@@ -106,11 +109,17 @@ public class BattleStateManager : MonoBehaviour
 			//	break;
 
 			case (StatesOfBattle.Lose): //set up if player loses
-				
+				Debug.Log("Loser");
+				gameObject.GetComponent<EventManager>().ExitBattle(); //lets player exit battle and walk around
+				currentState = StatesOfBattle.Start; //resets the BattleState script
+				unitNum = 0; //resets chosen unit
 				break;
 
 			case (StatesOfBattle.Win): //set up if player wins
-				
+				Debug.Log("Yah, okay you won good job I guess");
+				gameObject.GetComponent<EventManager>().ExitBattle(); //lets player exit battle and walk around
+				currentState = StatesOfBattle.Start; //resets the BattleState script
+				unitNum = 0; //resets chosen unit
 				break;
 		}
 	}

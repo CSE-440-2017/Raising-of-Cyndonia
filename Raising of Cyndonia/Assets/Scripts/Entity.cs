@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEditor;
 
 public class Entity : MonoBehaviour 
 {
 	[SerializeField] bool isDead, isPlayer, canAttack, inCombat, canInteract, statusEffect, canRecruit, canRegen, specialAvailable, defenseActive;
-	[SerializeField] public int level, maxHitPoints, hitPoints, magicPoints, skillPoints, hitPointReg, damage, magicDamage, specialDamage, defense, specialUnlock;
-	[SerializeField] public string name;
+	[SerializeField] int level, maxHitPoints, hitPoints, magicPoints, skillPoints, hitPointReg, damage, magicDamage, specialDamage, defense, specialUnlock;
+	[SerializeField] string name;
 	public Sprite image;
 
 	public RandomEncounter chanceEncounter; //chance that the enemy can be encountered
