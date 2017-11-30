@@ -106,9 +106,11 @@ public class BattleStateManager : MonoBehaviour
 			//	break;
 
 			case (StatesOfBattle.Lose): //set up if player loses
+				
 				break;
 
 			case (StatesOfBattle.Win): //set up if player wins
+				
 				break;
 		}
 	}

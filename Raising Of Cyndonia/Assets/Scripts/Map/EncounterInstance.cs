@@ -6,6 +6,7 @@ using UnityEngine;
 public class EncounterInstance : MonoBehaviour 
 {
 	public LocationList Cave;
+	GameObject player;
 	private EventManager eMan;
 	[SerializeField] float comChance, uncomChance, epicChance, encoChance;
 
@@ -13,6 +14,7 @@ public class EncounterInstance : MonoBehaviour
 	void Start()
 	{
 		eMan = GameObject.FindGameObjectWithTag("EventManager").GetComponent<EventManager>(); //event manager called
+		player = GameObject.FindGameObjectWithTag("Player");
 	}
 		
 	// Update is called once per frame
