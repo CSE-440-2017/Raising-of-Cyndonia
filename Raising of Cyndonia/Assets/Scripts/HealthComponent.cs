@@ -21,8 +21,12 @@ public class HealthComponent : MonoBehaviour
 		dead = entInfo.IsDead;
 		defenseAct = entInfo.DefenseActive;
 		currentHP = entInfo.HitPoints;
-		healthBar.value = currentHP;
-		healthBar.maxValue = maxHP;
+		if (entInfo.IsPlayer)
+		{
+			healthBar.value = currentHP;
+			healthBar.maxValue = maxHP;
+		}
+
 	}
 
 	//Update once per frame
@@ -56,7 +60,10 @@ public class HealthComponent : MonoBehaviour
 		else if (damage > 0) 
 		{
 			currentHP -= damage;
-			healthBar.value = currentHP;
+			if (entInfo.IsPlayer)
+			{
+				healthBar.value = currentHP;
+			}
 		}
 		Debug.Log(gameObject);
 		Debug.Log("objects health " + currentHP);
