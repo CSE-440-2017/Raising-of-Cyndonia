@@ -66,7 +66,7 @@ public class EventManager : MonoBehaviour
 				encounteredEnemies.Add(enPos); //adds Boss to list
 
 				//gets the enemy targets name
-				battleCamera.GetComponent<BattleUI>().targetName[i].text = enPos.GetComponent<Entity>().Name;
+				battleCamera.GetComponent<BattleUI>().targetName[i].text = i + 1 + ": " + enPos.GetComponent<Entity>().Name;
 			}
 			else if (i <= numberOfEnemies)
 			{		
@@ -107,6 +107,18 @@ public class EventManager : MonoBehaviour
 
 	public void RemoveEnemy(GameObject enemy)
 	{
+		
+		/*for (int i = 0; i < 3; i++)
+		{
+			if (battleCamera.GetComponent<BattleUI>().targetName[i].text == encounteredEnemies[i].GetComponent<Entity>().Name)
+			{
+				battleCamera.GetComponent<BattleUI>().targetName[i].text = " ";
+			}
+			else if (
+			{
+				
+			}
+		}*/
 		encounteredEnemies.Remove(enemy);
 	}
 
