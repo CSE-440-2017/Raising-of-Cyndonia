@@ -183,6 +183,13 @@ public class Entity : MonoBehaviour
 		set{ specialUnlock = value; }
 	}
 
+	//see what the entities name is
+	public string Name 
+	{
+		get{ return name; }
+		set{ name = value; }
+	}
+
 	public CharacterRole Role 
 	{
 		get{ return role; }
@@ -212,6 +219,7 @@ public class Entity : MonoBehaviour
 		get{ return magic; }
 		set{ magic = value; }
 	}
+
 }
 
 public enum CharacterRole

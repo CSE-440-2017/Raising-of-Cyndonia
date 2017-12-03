@@ -25,7 +25,7 @@ public class BattleStateManager : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update() 
-	{
+	{		
 		//player = GameObject.FindGameObjectWithTag("Player");
 		if (gameObject.GetComponent<EventManager>().encounteredEnemies.Count <= 0)
 		{
@@ -110,6 +110,18 @@ public class BattleStateManager : MonoBehaviour
 
 			case (StatesOfBattle.Lose): //set up if player loses
 				Debug.Log("Loser");
+
+				//pauses the game so that the player can see the end game message
+				bUI.lose.gameObject.SetActive(true);
+				if (Time.timeScale == 1)
+				{
+					Time.timeScale = 0;
+				}
+				else if ((Time.timeScale == 0) && (Input.GetKeyDown(KeyCode.Space)))
+				{
+					Time.timeScale = 1;
+				}
+
 				gameObject.GetComponent<EventManager>().ExitBattle(); //lets player exit battle and walk around
 				currentState = StatesOfBattle.Start; //resets the BattleState script
 				unitNum = 0; //resets chosen unit
@@ -117,6 +129,18 @@ public class BattleStateManager : MonoBehaviour
 
 			case (StatesOfBattle.Win): //set up if player wins
 				Debug.Log("Yah, okay you won good job I guess");
+
+				//pauses the game so that the player can see the end game message
+				bUI.win.gameObject.SetActive(true);
+				if (Time.timeScale == 1)
+				{
+					Time.timeScale = 0;
+				}
+				else if ((Time.timeScale == 0) && (Input.GetKeyDown(KeyCode.Space)))
+				{
+					Time.timeScale = 1;
+				}
+
 				gameObject.GetComponent<EventManager>().ExitBattle(); //lets player exit battle and walk around
 				currentState = StatesOfBattle.Start; //resets the BattleState script
 				unitNum = 0; //resets chosen unit

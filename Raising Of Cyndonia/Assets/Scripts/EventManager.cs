@@ -7,6 +7,7 @@ public class EventManager : MonoBehaviour
 	public GameObject exploreCamera, battleCamera, player, enPos, plPos, emptyPos1, emptyPos2; //sets up game objects
 	public List<GameObject> allEnemies = new List<GameObject>(); //creates a list of enemies
 	public int numberOfEnemies, whichEnemy; //random numbers for number of enemies and which enemies
+	public string name;
 	//public List<SkillsComponent> allSkills = new List<SkillsComponent>(); //creates a list of skills
 	//public GameObject tempEnt, 
 	public List<GameObject> encounteredEnemies = new List<GameObject>(); //temp game object was using to switch goblins and mess with
@@ -20,6 +21,8 @@ public class EventManager : MonoBehaviour
 	void Start() 
 	{
 		gameObject.GetComponent<BattleStateManager>().enabled = false;
+		battleCamera.GetComponent<BattleUI>().win.gameObject.SetActive(false);
+		battleCamera.GetComponent<BattleUI>().lose.gameObject.SetActive(false);
 		//exploreCamera = GameObject.FindGameObjectWithTag("MainCamera");
 		exploreCamera.SetActive(true); //turns on exploring player camera
 		//battleCamera = GameObject.FindGameObjectWithTag("BattleCamera");
@@ -54,11 +57,16 @@ public class EventManager : MonoBehaviour
 		{
 			//plPos = Instantiate(player.GetComponent<PlayerInfo>().allParty[i], playerBPosition[i].transform.position, Quaternion.identity) as GameObject; //places enemy in position 2
 			player.GetComponent<PlayerInfo>().allParty[i].transform.position = playerBPosition[i].transform.position;
+			//gets the player and player name
+			battleCamera.GetComponent<BattleUI>().partyName[i].text = player.GetComponent<PlayerInfo>().allParty[i].GetComponent<Entity>().Name;
 
 			if (GameObject.FindGameObjectWithTag("Boss").GetComponent<EncounterInstance>().BossStage == true)
 			{
 				enPos = Instantiate(allEnemies[i], enemyBPosition[i].transform.position, Quaternion.identity) as GameObject; //places random enemy in enemy position
 				encounteredEnemies.Add(enPos); //adds Boss to list
+
+				//gets the enemy targets name
+				battleCamera.GetComponent<BattleUI>().targetName[i].text = enPos.GetComponent<Entity>().Name;
 			}
 			else if (i <= numberOfEnemies)
 			{		
@@ -69,7 +77,9 @@ public class EventManager : MonoBehaviour
 				//encounteredEnemies.Add(allEnemies[whichEnemy]);
 				//encounteredEnemies[i] = allEnemies[whichEnemy]; 
 				enPos = Instantiate(allEnemies[whichEnemy], enemyBPosition[i].transform.position, Quaternion.identity) as GameObject; //places random enemy in enemy position
-				encounteredEnemies.Add(enPos);	//adds random range of enemies to list		
+				encounteredEnemies.Add(enPos);	//adds random range of enemies to list	
+				//gets the enemy targets name
+				battleCamera.GetComponent<BattleUI>().targetName[i].text = enPos.GetComponent<Entity>().Name;
 			}
 		}
 
