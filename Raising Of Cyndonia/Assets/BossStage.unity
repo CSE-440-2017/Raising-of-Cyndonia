@@ -14607,7 +14607,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -207.95892, y: 188.22757}
+  m_AnchoredPosition: {x: -207.95892, y: 188.22758}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &326914381
@@ -58395,7 +58395,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -207.95892, y: 188.22757}
+  m_AnchoredPosition: {x: -207.95892, y: 188.22758}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1274102916
@@ -59018,7 +59018,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -207.95892, y: 188.22757}
+  m_AnchoredPosition: {x: -207.95892, y: 188.22758}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1284422653
@@ -66641,6 +66641,11 @@ Prefab:
       propertyPath: EM
       value: 
       objectReference: {fileID: 984693226}
+    - target: {fileID: 114116448804795176, guid: a375ffcad4ba2bc4d9efb8846c1a3a89,
+        type: 2}
+      propertyPath: role
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a375ffcad4ba2bc4d9efb8846c1a3a89, type: 2}
   m_IsPrefabParent: 0
@@ -75414,6 +75419,11 @@ Prefab:
       propertyPath: EM
       value: 
       objectReference: {fileID: 984693226}
+    - target: {fileID: 114644037033660002, guid: a112c162dd516b442a29394863c1135d,
+        type: 2}
+      propertyPath: role
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a112c162dd516b442a29394863c1135d, type: 2}
   m_IsPrefabParent: 0
@@ -91108,6 +91118,16 @@ Prefab:
       propertyPath: EM
       value: 
       objectReference: {fileID: 984693226}
+    - target: {fileID: 114805736198497256, guid: 064588e42a2ee804199464ef8cf23a48,
+        type: 2}
+      propertyPath: role
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114805736198497256, guid: 064588e42a2ee804199464ef8cf23a48,
+        type: 2}
+      propertyPath: attacks
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 064588e42a2ee804199464ef8cf23a48, type: 2}
   m_IsPrefabParent: 0
