@@ -45768,7 +45768,7 @@ MonoBehaviour:
   - {fileID: 958974734}
   - {fileID: 2062622575}
   - {fileID: 263345606}
-  otherClip: {fileID: 8300000, guid: 7194e8a354caf9744bbcfa64fd4768fd, type: 3}
+  otherClip: {fileID: 8300000, guid: a2fab99403a9c984585dbd004726f5d5, type: 3}
   End: {fileID: 8300000, guid: 2f65b26f95e32114dba31654cf90acc6, type: 3}
 --- !u!4 &984693227
 Transform:
