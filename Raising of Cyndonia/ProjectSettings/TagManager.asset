@@ -8,6 +8,7 @@ TagManager:
   - BattleCamera
   - Walls
   - Boss
+  - RNGTerrain
   layers:
   - Default
   - TransparentFX
