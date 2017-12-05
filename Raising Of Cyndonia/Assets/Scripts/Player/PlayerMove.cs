@@ -18,7 +18,7 @@ public class PlayerMove : MonoBehaviour
 	public Sprite sSprite;
 	public Sprite wSprite;
 
-	public float speed = 0.5f; //speed of grid transition
+	public float speed = 0.1f; //speed of grid transition
 
 	void Start()
 	{
