@@ -25,4 +25,5 @@ public class DialogueHolder : MonoBehaviour {
 			}
 		}
 	}
+		
 }
