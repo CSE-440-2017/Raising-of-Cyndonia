@@ -58,6 +58,7 @@ public class EventManager : MonoBehaviour
 			gameObject.GetComponent<BattleStateManager>().enabled = true;
 			audio.clip = otherClip;
 			audio.Play();
+
 		}
 
 		for (int i = 0; i < 3; i++)
@@ -74,6 +75,7 @@ public class EventManager : MonoBehaviour
 
 				//gets the enemy targets name
 				battleCamera.GetComponent<BattleUI>().targetName[i].text = i + 1 + ": " + enPos.GetComponent<Entity>().Name;
+				StartCoroutine(DelaySpawn());
 			}
 			/*else if (i <= numberOfEnemies && isBoss == false)
 			{		
@@ -90,6 +92,7 @@ public class EventManager : MonoBehaviour
 			}*/
 		}
 
+
 		/*
 		//rEncounter is based off of the tile and how it is set to uncommon, common, or epic and then the gameobjects themselves have encounter rates 
 		encounteredEnemies = GetRandomEnemy(EnemiesInLocation(rEncounter)); //make this enemy random as well
@@ -102,6 +105,11 @@ public class EventManager : MonoBehaviour
 		enPos.GetComponent<SpriteRenderer>().sprite = encounteredEnemies.image;
 		*/
 
+	}
+
+	IEnumerator DelaySpawn()
+	{
+		yield return new WaitForSeconds(1);
 	}
 
 	public void ExitBattle()
