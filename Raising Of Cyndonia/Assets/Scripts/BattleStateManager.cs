@@ -87,8 +87,12 @@ public class BattleStateManager : MonoBehaviour
 				else
 				{					
 					enemyUnit = gameObject.GetComponent<EventManager>().encounteredEnemies[unitNum]; //grabs a unit from the eventmanager's encounter list
-				
-					if (bUI.CurMenu == PlayerMenu.Target)//Need to update this for just melee attack this is just for testing
+
+					enemyUnit.GetComponent<Entity>().Attacks = AttackType.Melee;
+					enemyUnit.GetComponent<AttackComponent>().Attack(player.GetComponent<PlayerInfo>().allParty[0]); //Deal damage to the player
+					enemyUnit.GetComponent<Entity>().Attacks = AttackType.None; //Reset the attack type to nothing so that this statement doesn't execute again
+					unitNum++;
+					/*if (bUI.CurMenu == PlayerMenu.Target)//Need to update this for just melee attack this is just for testing
 					{
 						enemyUnit.GetComponent<Entity>().Attacks = AttackType.Melee;
 					}
@@ -101,7 +105,7 @@ public class BattleStateManager : MonoBehaviour
 					{
 						enemyUnit.GetComponent<AttackComponent>().Attack(player.GetComponent<PlayerInfo>().allParty[bUI.Target]); //Deal damage to the player
 						enemyUnit.GetComponent<Entity>().Attacks = AttackType.None; //Reset the attack type to nothing so that this statement doesn't execute again
-					}
+					}*/
 				}
 				break;
 
