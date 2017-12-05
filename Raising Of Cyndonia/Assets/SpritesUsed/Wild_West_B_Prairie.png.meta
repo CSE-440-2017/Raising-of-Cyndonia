@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 2002f49f8e4d8344a91c51c6dc4aadf6
-timeCreated: 1511904820
+timeCreated: 1512448382
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -14,8 +14,8 @@ TextureImporter:
     21300014: Wild_West_B_Prairie_7
     21300016: Wild_West_B_Prairie_8
     21300018: Wild_West_B_Prairie_9
-    21300020: Wild_West_B_Prairie_10
-    21300022: Wild_West_B_Prairie_11
+    21300020: Bucket01
+    21300022: Bucket02
     21300024: Wild_West_B_Prairie_12
     21300026: Wild_West_B_Prairie_13
     21300028: Wild_West_B_Prairie_14
@@ -38,8 +38,8 @@ TextureImporter:
     21300062: Wild_West_B_Prairie_31
     21300064: Wild_West_B_Prairie_32
     21300066: Wild_West_B_Prairie_33
-    21300068: Wild_West_B_Prairie_34
-    21300070: Wild_West_B_Prairie_35
+    21300068: Bucket03
+    21300070: Bucket04
     21300072: Wild_West_B_Prairie_36
     21300074: Wild_West_B_Prairie_37
     21300076: Wild_West_B_Prairie_38
@@ -298,14 +298,14 @@ TextureImporter:
     21300582: Wild_West_B_Prairie_291
     21300584: Wild_West_B_Prairie_292
     21300586: Wild_West_B_Prairie_293
-    21300588: Wild_West_B_Prairie_294
-    21300590: Wild_West_B_Prairie_295
+    21300588: Bone_Ribs01
+    21300590: Bone_Ribs02
     21300592: Wild_West_B_Prairie_296
     21300594: Wild_West_B_Prairie_297
-    21300596: Wild_West_B_Prairie_298
-    21300598: Wild_West_B_Prairie_299
-    21300600: Wild_West_B_Prairie_300
-    21300602: Wild_West_B_Prairie_301
+    21300596: Bones01
+    21300598: Bones02
+    21300600: Bone_Skull01
+    21300602: Bone_Skull02
     21300604: Wild_West_B_Prairie_302
     21300606: Wild_West_B_Prairie_303
     21300608: Wild_West_B_Prairie_304
@@ -328,14 +328,14 @@ TextureImporter:
     21300642: Wild_West_B_Prairie_321
     21300644: Wild_West_B_Prairie_322
     21300646: Wild_West_B_Prairie_323
-    21300648: Wild_West_B_Prairie_324
-    21300650: Wild_West_B_Prairie_325
+    21300648: Bone_Ribs03
+    21300650: Bone_Ribs04
     21300652: Wild_West_B_Prairie_326
     21300654: Wild_West_B_Prairie_327
-    21300656: Wild_West_B_Prairie_328
-    21300658: Wild_West_B_Prairie_329
-    21300660: Wild_West_B_Prairie_330
-    21300662: Wild_West_B_Prairie_331
+    21300656: Bones03
+    21300658: Bones04
+    21300660: TwoBones01
+    21300662: TwoBones02
     21300664: Wild_West_B_Prairie_332
     21300666: Wild_West_B_Prairie_333
     21300668: Wild_West_B_Prairie_334
@@ -357,12 +357,12 @@ TextureImporter:
     21300700: Bush02
     21300702: Wild_West_B_Prairie_351
     21300704: Wild_West_B_Prairie_352
-    21300706: Wild_West_B_Prairie_353
-    21300708: Wild_West_B_Prairie_354
+    21300706: TwoWay01
+    21300708: TwoWay02
     21300710: Fireplace
     21300712: Wild_West_B_Prairie_356
-    21300714: Wild_West_B_Prairie_357
-    21300716: Wild_West_B_Prairie_358
+    21300714: Bone_HornSkull01
+    21300716: Bone_HornSkull02
     21300718: Wild_West_B_Prairie_359
     21300720: Wild_West_B_Prairie_360
     21300722: Wild_West_B_Prairie_361
@@ -381,12 +381,12 @@ TextureImporter:
     21300748: Bush04
     21300750: Wild_West_B_Prairie_375
     21300752: Wild_West_B_Prairie_376
-    21300754: Wild_West_B_Prairie_377
-    21300756: Wild_West_B_Prairie_378
+    21300754: Two03
+    21300756: TwoWay04
     21300758: Wild_West_B_Prairie_379
     21300760: Wild_West_B_Prairie_380
-    21300762: Wild_West_B_Prairie_381
-    21300764: Wild_West_B_Prairie_382
+    21300762: Bone_HornSkull03
+    21300764: Bone_HornSkull04
     21300766: Wild_West_B_Prairie_383
     21300768: Wild_West_B_Prairie_384
     21300770: Wild_West_B_Prairie_385
@@ -1040,7 +1040,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Wild_West_B_Prairie_10
+      name: Bucket01
       rect:
         serializedVersion: 2
         x: 192
@@ -1053,7 +1053,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Wild_West_B_Prairie_11
+      name: Bucket02
       rect:
         serializedVersion: 2
         x: 208
@@ -1352,7 +1352,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Wild_West_B_Prairie_34
+      name: Bucket03
       rect:
         serializedVersion: 2
         x: 192
@@ -1365,7 +1365,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Wild_West_B_Prairie_35
+      name: Bucket04
       rect:
         serializedVersion: 2
         x: 208
@@ -4732,7 +4732,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Wild_West_B_Prairie_294
+      name: Bone_Ribs01
       rect:
         serializedVersion: 2
         x: 128
@@ -4745,7 +4745,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Wild_West_B_Prairie_295
+      name: Bone_Ribs02
       rect:
         serializedVersion: 2
         x: 144
@@ -4784,7 +4784,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Wild_West_B_Prairie_298
+      name: Bones01
       rect:
         serializedVersion: 2
         x: 192
@@ -4797,10 +4797,10 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Wild_West_B_Prairie_299
+      name: Bones02
       rect:
         serializedVersion: 2
-        x: 208
+        x: 207
         y: 336
         width: 16
         height: 16
@@ -4810,7 +4810,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Wild_West_B_Prairie_300
+      name: Bone_Skull01
       rect:
         serializedVersion: 2
         x: 224
@@ -4823,7 +4823,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Wild_West_B_Prairie_301
+      name: Bone_Skull02
       rect:
         serializedVersion: 2
         x: 240
@@ -5122,7 +5122,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Wild_West_B_Prairie_324
+      name: Bone_Ribs03
       rect:
         serializedVersion: 2
         x: 128
@@ -5135,7 +5135,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Wild_West_B_Prairie_325
+      name: Bone_Ribs04
       rect:
         serializedVersion: 2
         x: 144
@@ -5174,7 +5174,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Wild_West_B_Prairie_328
+      name: Bones03
       rect:
         serializedVersion: 2
         x: 192
@@ -5187,7 +5187,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Wild_West_B_Prairie_329
+      name: Bones04
       rect:
         serializedVersion: 2
         x: 208
@@ -5200,7 +5200,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Wild_West_B_Prairie_330
+      name: TwoBones01
       rect:
         serializedVersion: 2
         x: 224
@@ -5213,7 +5213,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Wild_West_B_Prairie_331
+      name: TwoBones02
       rect:
         serializedVersion: 2
         x: 240
@@ -5499,7 +5499,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Wild_West_B_Prairie_353
+      name: TwoWay01
       rect:
         serializedVersion: 2
         x: 128
@@ -5512,7 +5512,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Wild_West_B_Prairie_354
+      name: TwoWay02
       rect:
         serializedVersion: 2
         x: 144
@@ -5551,7 +5551,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Wild_West_B_Prairie_357
+      name: Bone_HornSkull01
       rect:
         serializedVersion: 2
         x: 192
@@ -5564,7 +5564,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Wild_West_B_Prairie_358
+      name: Bone_HornSkull02
       rect:
         serializedVersion: 2
         x: 208
@@ -5811,10 +5811,10 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Wild_West_B_Prairie_377
+      name: Two03
       rect:
         serializedVersion: 2
-        x: 128
+        x: 127
         y: 288
         width: 16
         height: 16
@@ -5824,7 +5824,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Wild_West_B_Prairie_378
+      name: TwoWay04
       rect:
         serializedVersion: 2
         x: 144
@@ -5863,7 +5863,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Wild_West_B_Prairie_381
+      name: Bone_HornSkull03
       rect:
         serializedVersion: 2
         x: 192
@@ -5876,7 +5876,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Wild_West_B_Prairie_382
+      name: Bone_HornSkull04
       rect:
         serializedVersion: 2
         x: 208
