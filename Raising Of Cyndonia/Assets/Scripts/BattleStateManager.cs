@@ -117,14 +117,7 @@ public class BattleStateManager : MonoBehaviour
 
 				//pauses the game so that the player can see the end game message
 				bUI.lose.gameObject.SetActive(true);
-				if (Time.timeScale == 1)
-				{
-					Time.timeScale = 0;
-				}
-				else if ((Time.timeScale == 0) && (Input.GetKeyDown(KeyCode.Space)))
-				{
-					Time.timeScale = 1;
-				}
+
 
 				gameObject.GetComponent<EventManager>().ExitBattle(); //lets player exit battle and walk around
 				currentState = StatesOfBattle.Start; //resets the BattleState script
@@ -136,14 +129,10 @@ public class BattleStateManager : MonoBehaviour
 
 				//pauses the game so that the player can see the end game message
 				bUI.win.gameObject.SetActive(true);
-				if (Time.timeScale == 1)
-				{
-					Time.timeScale = 0;
-				}
-				else if ((Time.timeScale == 0) && (Input.GetKeyDown(KeyCode.Space)))
-				{
-					Time.timeScale = 1;
-				}
+				//while (!(Input.GetKeyDown(KeyCode.Space)))
+				//{
+
+				//}
 
 				gameObject.GetComponent<EventManager>().ExitBattle(); //lets player exit battle and walk around
 				currentState = StatesOfBattle.Start; //resets the BattleState script

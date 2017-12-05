@@ -11,8 +11,7 @@ public class BattleUI : MonoBehaviour
 	public GameObject targetChoice; //The choice for the target to attack
 	//public Text attack, skill, inventory, escape, skill1, skill2, skill3, skill4; //different text
 	public Text win, lose;
-	public List<Text> partyName = new List<Text>();
-	public List<Text> targetName = new List<Text>();
+	public Text[] partyName, targetName;
 	public int curChoice, targetUnit; //input key for choosing
 	public BattleStateManager BSM;
 
@@ -108,6 +107,7 @@ public class BattleUI : MonoBehaviour
 				descrip.gameObject.SetActive(false);
 				target.gameObject.SetActive(true);
 				break;
+							
 		}
 	}
 

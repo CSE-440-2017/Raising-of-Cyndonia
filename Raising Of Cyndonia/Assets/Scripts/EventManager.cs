@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class EventManager : MonoBehaviour 
 {
 	public GameObject exploreCamera, battleCamera, player, enPos, plPos, emptyPos1, emptyPos2; //sets up game objects
@@ -13,9 +14,12 @@ public class EventManager : MonoBehaviour
 	public List<GameObject> encounteredEnemies = new List<GameObject>(); //temp game object was using to switch goblins and mess with
 	BattleUI bUI; //battle UI
 	[SerializeField] bool isBoss;
+	AudioSource audio;
 
 	public Transform[] enemyBPosition; //the positions enemies can be in
 	public Transform[] playerBPosition; //the positions the player's party can be in
+
+	public AudioClip otherClip, End;
 
 	// Use this for initialization
 	void Start() 
@@ -28,6 +32,7 @@ public class EventManager : MonoBehaviour
 		//battleCamera = GameObject.FindGameObjectWithTag("BattleCamera");
 		battleCamera.SetActive(false); //turns off battle camera
 		player = GameObject.FindGameObjectWithTag("Player");
+		audio = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -51,6 +56,8 @@ public class EventManager : MonoBehaviour
 		if (player.GetComponent<PlayerMove>().inCombat)
 		{
 			gameObject.GetComponent<BattleStateManager>().enabled = true;
+			audio.clip = otherClip;
+			audio.Play();
 		}
 
 		for (int i = 0; i < 3; i++)
@@ -58,7 +65,7 @@ public class EventManager : MonoBehaviour
 			//plPos = Instantiate(player.GetComponent<PlayerInfo>().allParty[i], playerBPosition[i].transform.position, Quaternion.identity) as GameObject; //places enemy in position 2
 			player.GetComponent<PlayerInfo>().allParty[i].transform.position = playerBPosition[i].transform.position;
 			//gets the player and player name
-			battleCamera.GetComponent<BattleUI>().partyName[i].text = player.GetComponent<PlayerInfo>().allParty[i].GetComponent<Entity>().Name;
+			battleCamera.GetComponent<BattleUI>().partyName[2-i].text = player.GetComponent<PlayerInfo>().allParty[i].GetComponent<Entity>().Name;
 
 			if (GameObject.FindGameObjectWithTag("Boss").GetComponent<EncounterInstance>().BossStage == true)
 			{
@@ -68,7 +75,7 @@ public class EventManager : MonoBehaviour
 				//gets the enemy targets name
 				battleCamera.GetComponent<BattleUI>().targetName[i].text = i + 1 + ": " + enPos.GetComponent<Entity>().Name;
 			}
-			else if (i <= numberOfEnemies)
+			else if (i <= numberOfEnemies && isBoss == false)
 			{		
 				whichEnemy = Random.Range(0, 5); //roles a random number of which random enemy in list
 				//Debug.Log(encounteredEnemies[whichEnemy].name);
@@ -103,6 +110,8 @@ public class EventManager : MonoBehaviour
 		exploreCamera.SetActive(true); //turns on exploring player camera
 		battleCamera.SetActive(false); //turns off battle camera
 		player.GetComponent<PlayerMove>().inCombat = false; //makes it so player can move outside of combat
+		audio.clip = End;
+		audio.Play();
 	}
 
 	public void RemoveEnemy(GameObject enemy)
@@ -119,7 +128,27 @@ public class EventManager : MonoBehaviour
 				
 			}
 		}*/
+
+
+
+			//if (battleCamera.GetComponent<BattleUI>().targetName[i].text == enemy.GetComponent<Entity>().Name)
+			//{
+			//	battleCamera.GetComponent<BattleUI>().targetName.Remove(battleCamera.GetComponent<BattleUI>().targetName[0]);
+				//battleCamera.GetComponent<BattleUI>().targetName[i].text = encounteredEnemies[j].GetComponent<Entity>().Name;
+				//j++;
+			//}
+			//battleCamera.GetComponent<BattleUI>().targetName[i].text = encounteredEnemies[j].GetComponent<Entity>().Name;
+
+		//}
 		encounteredEnemies.Remove(enemy);
+		battleCamera.GetComponent<BattleUI>().targetName[0].text = battleCamera.GetComponent<BattleUI>().targetName[1].text;
+		battleCamera.GetComponent<BattleUI>().targetName[1].text = battleCamera.GetComponent<BattleUI>().targetName[2].text;
+		battleCamera.GetComponent<BattleUI>().targetName[2].text = " ";
+
+
+		//battleCamera.GetComponent<BattleUI>().targetName[i].text = enPos.GetComponent<Entity>().Name;
+
+		//battleCamera.GetComponent<BattleUI>().targetName[encounteredEnemies.Count].text = enPos.GetComponent<Entity>().Name;
 	}
 
 
