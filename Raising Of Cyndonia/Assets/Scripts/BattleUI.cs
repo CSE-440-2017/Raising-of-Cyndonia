@@ -179,7 +179,7 @@ public class BattleUI : MonoBehaviour
 				else if (curMenu == PlayerMenu.Skill) 
 				{
 					//Skill 3 used description
-					ChangePanel (PlayerMenu.Target);
+					ChangePanel (PlayerMenu.Choice);
 				} 
 				else if (curMenu == PlayerMenu.Inventory)
 				{
@@ -208,7 +208,7 @@ public class BattleUI : MonoBehaviour
 				else if (curMenu == PlayerMenu.Inventory)
 				{
 					//Item 4 used description
-					ChangePanel(PlayerMenu.Description);
+					ChangePanel(PlayerMenu.Choice);
 				}
 				else if (curMenu == PlayerMenu.Target)
 				{
