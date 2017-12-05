@@ -75,7 +75,7 @@ public class EventManager : MonoBehaviour
 				//gets the enemy targets name
 				battleCamera.GetComponent<BattleUI>().targetName[i].text = i + 1 + ": " + enPos.GetComponent<Entity>().Name;
 			}
-			else if (i <= numberOfEnemies && isBoss == false)
+			/*else if (i <= numberOfEnemies && isBoss == false)
 			{		
 				whichEnemy = Random.Range(0, 5); //roles a random number of which random enemy in list
 				//Debug.Log(encounteredEnemies[whichEnemy].name);
@@ -87,7 +87,7 @@ public class EventManager : MonoBehaviour
 				encounteredEnemies.Add(enPos);	//adds random range of enemies to list	
 				//gets the enemy targets name
 				battleCamera.GetComponent<BattleUI>().targetName[i].text = enPos.GetComponent<Entity>().Name;
-			}
+			}*/
 		}
 
 		/*
@@ -110,8 +110,9 @@ public class EventManager : MonoBehaviour
 		exploreCamera.SetActive(true); //turns on exploring player camera
 		battleCamera.SetActive(false); //turns off battle camera
 		player.GetComponent<PlayerMove>().inCombat = false; //makes it so player can move outside of combat
+		audio.Pause();
 		audio.clip = End;
-		audio.Play();
+		audio.PlayDelayed(0.05f);
 	}
 
 	public void RemoveEnemy(GameObject enemy)

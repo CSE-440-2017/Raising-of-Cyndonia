@@ -4439,8 +4439,6 @@ GameObject:
   m_Component:
   - component: {fileID: 86614714}
   - component: {fileID: 86614715}
-  - component: {fileID: 86614717}
-  - component: {fileID: 86614716}
   m_Layer: 0
   m_Name: purple_caves_floor_1 (80)
   m_TagString: Untagged
@@ -4504,48 +4502,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
---- !u!114 &86614716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 86614713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
---- !u!61 &86614717
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 86614713}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &87048346
 GameObject:
   m_ObjectHideFlags: 0
@@ -4696,8 +4652,6 @@ GameObject:
   m_Component:
   - component: {fileID: 102760870}
   - component: {fileID: 102760871}
-  - component: {fileID: 102760873}
-  - component: {fileID: 102760872}
   m_Layer: 0
   m_Name: purple_caves_floor_2 (146)
   m_TagString: Untagged
@@ -4761,48 +4715,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
---- !u!114 &102760872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 102760869}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
---- !u!61 &102760873
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 102760869}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &105175192
 GameObject:
   m_ObjectHideFlags: 0
@@ -5242,8 +5154,6 @@ GameObject:
   m_Component:
   - component: {fileID: 112190225}
   - component: {fileID: 112190226}
-  - component: {fileID: 112190228}
-  - component: {fileID: 112190227}
   m_Layer: 0
   m_Name: purple_caves_floor_3 (136)
   m_TagString: Untagged
@@ -5307,48 +5217,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
---- !u!114 &112190227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 112190224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
---- !u!61 &112190228
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 112190224}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &112318073
 GameObject:
   m_ObjectHideFlags: 0
@@ -6323,8 +6191,6 @@ GameObject:
   m_Component:
   - component: {fileID: 145853273}
   - component: {fileID: 145853274}
-  - component: {fileID: 145853276}
-  - component: {fileID: 145853275}
   m_Layer: 0
   m_Name: purple_caves_floor_4 (155)
   m_TagString: Untagged
@@ -6388,48 +6254,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
---- !u!114 &145853275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 145853272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
---- !u!61 &145853276
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 145853272}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &147337878
 GameObject:
   m_ObjectHideFlags: 0
@@ -11285,8 +11109,6 @@ GameObject:
   m_Component:
   - component: {fileID: 249174960}
   - component: {fileID: 249174961}
-  - component: {fileID: 249174963}
-  - component: {fileID: 249174962}
   m_Layer: 0
   m_Name: purple_caves_floor_3 (139)
   m_TagString: Untagged
@@ -11350,48 +11172,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
---- !u!114 &249174962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 249174959}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
---- !u!61 &249174963
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 249174959}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &249830524
 GameObject:
   m_ObjectHideFlags: 0
@@ -12604,8 +12384,6 @@ GameObject:
   m_Component:
   - component: {fileID: 280916032}
   - component: {fileID: 280916033}
-  - component: {fileID: 280916035}
-  - component: {fileID: 280916034}
   m_Layer: 0
   m_Name: purple_caves_floor_4 (154)
   m_TagString: Untagged
@@ -12669,48 +12447,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
---- !u!114 &280916034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 280916031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
---- !u!61 &280916035
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 280916031}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &281781885
 GameObject:
   m_ObjectHideFlags: 0
@@ -13343,8 +13079,6 @@ GameObject:
   m_Component:
   - component: {fileID: 295267595}
   - component: {fileID: 295267596}
-  - component: {fileID: 295267598}
-  - component: {fileID: 295267597}
   m_Layer: 0
   m_Name: purple_caves_floor_4 (152)
   m_TagString: Untagged
@@ -13408,48 +13142,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
---- !u!114 &295267597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 295267594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
---- !u!61 &295267598
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 295267594}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &296076081
 GameObject:
   m_ObjectHideFlags: 0
@@ -14914,7 +14606,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -207.95895, y: 188.22752}
+  m_AnchoredPosition: {x: -207.95892, y: 188.22758}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &326914381
@@ -15338,8 +15030,6 @@ GameObject:
   m_Component:
   - component: {fileID: 331815365}
   - component: {fileID: 331815366}
-  - component: {fileID: 331815368}
-  - component: {fileID: 331815367}
   m_Layer: 0
   m_Name: purple_caves_floor_4 (156)
   m_TagString: Untagged
@@ -15403,48 +15093,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
---- !u!114 &331815367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 331815364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
---- !u!61 &331815368
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 331815364}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &332964499
 GameObject:
   m_ObjectHideFlags: 0
@@ -29032,8 +28680,6 @@ GameObject:
   m_Component:
   - component: {fileID: 588496840}
   - component: {fileID: 588496841}
-  - component: {fileID: 588496843}
-  - component: {fileID: 588496842}
   m_Layer: 0
   m_Name: purple_caves_floor_1 (105)
   m_TagString: Untagged
@@ -29097,48 +28743,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
---- !u!114 &588496842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 588496839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
---- !u!61 &588496843
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 588496839}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &590946369
 GameObject:
   m_ObjectHideFlags: 0
@@ -33662,8 +33266,6 @@ GameObject:
   m_Component:
   - component: {fileID: 706484137}
   - component: {fileID: 706484138}
-  - component: {fileID: 706484140}
-  - component: {fileID: 706484139}
   m_Layer: 0
   m_Name: purple_caves_floor_4 (151)
   m_TagString: Untagged
@@ -33727,48 +33329,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
---- !u!114 &706484139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 706484136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
---- !u!61 &706484140
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 706484136}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &706797939
 GameObject:
   m_ObjectHideFlags: 0
@@ -38121,8 +37681,6 @@ GameObject:
   m_Component:
   - component: {fileID: 799198183}
   - component: {fileID: 799198184}
-  - component: {fileID: 799198186}
-  - component: {fileID: 799198185}
   m_Layer: 0
   m_Name: purple_caves_floor_4 (153)
   m_TagString: Untagged
@@ -38186,48 +37744,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
---- !u!114 &799198185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 799198182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
---- !u!61 &799198186
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 799198182}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &799615447
 GameObject:
   m_ObjectHideFlags: 0
@@ -38992,8 +38508,6 @@ GameObject:
   m_Component:
   - component: {fileID: 824457413}
   - component: {fileID: 824457414}
-  - component: {fileID: 824457416}
-  - component: {fileID: 824457415}
   m_Layer: 0
   m_Name: purple_caves_floor_3 (133)
   m_TagString: Untagged
@@ -39057,48 +38571,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
---- !u!114 &824457415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 824457412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
---- !u!61 &824457416
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 824457412}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &825258429
 GameObject:
   m_ObjectHideFlags: 0
@@ -39497,8 +38969,6 @@ GameObject:
   m_Component:
   - component: {fileID: 832676838}
   - component: {fileID: 832676837}
-  - component: {fileID: 832676839}
-  - component: {fileID: 832676836}
   m_Layer: 0
   m_Name: purple_caves_floor_2 (40)
   m_TagString: Untagged
@@ -39506,23 +38976,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &832676836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 832676835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
 --- !u!212 &832676837
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -39579,31 +39032,6 @@ Transform:
   m_Father: {fileID: 420728537}
   m_RootOrder: 247
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &832676839
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 832676835}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &833941012
 GameObject:
   m_ObjectHideFlags: 0
@@ -41013,8 +40441,6 @@ GameObject:
   m_Component:
   - component: {fileID: 879645982}
   - component: {fileID: 879645983}
-  - component: {fileID: 879645985}
-  - component: {fileID: 879645984}
   m_Layer: 0
   m_Name: purple_caves_floor_4 (157)
   m_TagString: Untagged
@@ -41078,48 +40504,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
---- !u!114 &879645984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 879645981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
---- !u!61 &879645985
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 879645981}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &880041320
 GameObject:
   m_ObjectHideFlags: 0
@@ -44177,8 +43561,6 @@ GameObject:
   m_Component:
   - component: {fileID: 961526154}
   - component: {fileID: 961526155}
-  - component: {fileID: 961526157}
-  - component: {fileID: 961526156}
   m_Layer: 0
   m_Name: purple_caves_floor_4 (158)
   m_TagString: Untagged
@@ -44242,48 +43624,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
---- !u!114 &961526156
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 961526153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
---- !u!61 &961526157
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 961526153}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &962382600
 GameObject:
   m_ObjectHideFlags: 0
@@ -47910,8 +47250,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1048235070}
   - component: {fileID: 1048235069}
-  - component: {fileID: 1048235071}
-  - component: {fileID: 1048235068}
   m_Layer: 0
   m_Name: purple_caves_floor_1 (38)
   m_TagString: Untagged
@@ -47919,23 +47257,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1048235068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1048235067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
 --- !u!212 &1048235069
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -47992,31 +47313,6 @@ Transform:
   m_Father: {fileID: 420728537}
   m_RootOrder: 240
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1048235071
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1048235067}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &1050464024
 GameObject:
   m_ObjectHideFlags: 0
@@ -49869,8 +49165,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1083822392}
   - component: {fileID: 1083822393}
-  - component: {fileID: 1083822395}
-  - component: {fileID: 1083822394}
   m_Layer: 0
   m_Name: purple_caves_floor_3 (137)
   m_TagString: Untagged
@@ -49934,48 +49228,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
---- !u!114 &1083822394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1083822391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
---- !u!61 &1083822395
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1083822391}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &1085935368
 GameObject:
   m_ObjectHideFlags: 0
@@ -52047,8 +51299,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1124889144}
   - component: {fileID: 1124889145}
-  - component: {fileID: 1124889147}
-  - component: {fileID: 1124889146}
   m_Layer: 0
   m_Name: purple_caves_floor_3 (134)
   m_TagString: Untagged
@@ -52112,48 +51362,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
---- !u!114 &1124889146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1124889143}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
---- !u!61 &1124889147
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1124889143}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &1126593440
 GameObject:
   m_ObjectHideFlags: 0
@@ -55310,8 +54518,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1173547972}
   - component: {fileID: 1173547971}
-  - component: {fileID: 1173547973}
-  - component: {fileID: 1173547970}
   m_Layer: 0
   m_Name: purple_caves_floor_2 (37)
   m_TagString: Untagged
@@ -55319,23 +54525,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1173547970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1173547969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
 --- !u!212 &1173547971
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -55392,31 +54581,6 @@ Transform:
   m_Father: {fileID: 420728537}
   m_RootOrder: 235
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1173547973
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1173547969}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &1174427842
 GameObject:
   m_ObjectHideFlags: 0
@@ -56687,8 +55851,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1202456169}
   - component: {fileID: 1202456170}
-  - component: {fileID: 1202456172}
-  - component: {fileID: 1202456171}
   m_Layer: 0
   m_Name: purple_caves_floor_3 (115)
   m_TagString: Untagged
@@ -56752,48 +55914,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
---- !u!114 &1202456171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1202456168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
---- !u!61 &1202456172
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1202456168}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &1205118829
 GameObject:
   m_ObjectHideFlags: 0
@@ -57066,8 +56186,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1205906873}
   - component: {fileID: 1205906872}
-  - component: {fileID: 1205906874}
-  - component: {fileID: 1205906871}
   m_Layer: 0
   m_Name: purple_caves_floor_1 (42)
   m_TagString: Untagged
@@ -57075,23 +56193,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1205906871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1205906870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
 --- !u!212 &1205906872
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -57148,31 +56249,6 @@ Transform:
   m_Father: {fileID: 420728537}
   m_RootOrder: 256
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1205906874
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1205906870}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &1208017681
 GameObject:
   m_ObjectHideFlags: 0
@@ -59306,7 +58382,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -207.95895, y: 188.22752}
+  m_AnchoredPosition: {x: -207.95892, y: 188.22758}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1274102916
@@ -59929,7 +59005,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -207.95895, y: 188.22752}
+  m_AnchoredPosition: {x: -207.95892, y: 188.22758}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1284422653
@@ -60683,8 +59759,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1299988413}
   - component: {fileID: 1299988414}
-  - component: {fileID: 1299988416}
-  - component: {fileID: 1299988415}
   m_Layer: 0
   m_Name: purple_caves_floor_2 (144)
   m_TagString: Untagged
@@ -60748,48 +59822,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
---- !u!114 &1299988415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1299988412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
---- !u!61 &1299988416
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1299988412}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &1300106639
 GameObject:
   m_ObjectHideFlags: 0
@@ -61396,8 +60428,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1311891433}
   - component: {fileID: 1311891434}
-  - component: {fileID: 1311891436}
-  - component: {fileID: 1311891435}
   m_Layer: 0
   m_Name: purple_caves_floor_4 (159)
   m_TagString: Untagged
@@ -61461,48 +60491,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
---- !u!114 &1311891435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1311891432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
---- !u!61 &1311891436
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1311891432}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &1312013532
 GameObject:
   m_ObjectHideFlags: 0
@@ -64456,8 +63444,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1371220281}
   - component: {fileID: 1371220282}
-  - component: {fileID: 1371220284}
-  - component: {fileID: 1371220283}
   m_Layer: 0
   m_Name: purple_caves_floor_2 (147)
   m_TagString: Untagged
@@ -64521,48 +63507,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
---- !u!114 &1371220283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1371220280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
---- !u!61 &1371220284
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1371220280}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &1372490210
 GameObject:
   m_ObjectHideFlags: 0
@@ -67497,8 +66441,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1430747341}
   - component: {fileID: 1430747342}
-  - component: {fileID: 1430747344}
-  - component: {fileID: 1430747343}
   m_Layer: 0
   m_Name: purple_caves_floor_1 (106)
   m_TagString: Untagged
@@ -67562,48 +66504,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
---- !u!114 &1430747343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1430747340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
---- !u!61 &1430747344
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1430747340}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &1430769360
 GameObject:
   m_ObjectHideFlags: 0
@@ -68613,8 +67513,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1448303658}
   - component: {fileID: 1448303657}
-  - component: {fileID: 1448303659}
-  - component: {fileID: 1448303656}
   m_Layer: 0
   m_Name: purple_caves_floor_1 (39)
   m_TagString: Untagged
@@ -68622,23 +67520,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1448303656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1448303655}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
 --- !u!212 &1448303657
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -68695,31 +67576,6 @@ Transform:
   m_Father: {fileID: 420728537}
   m_RootOrder: 244
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1448303659
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1448303655}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &1448457596
 GameObject:
   m_ObjectHideFlags: 0
@@ -68946,8 +67802,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1459741492}
   - component: {fileID: 1459741491}
-  - component: {fileID: 1459741493}
-  - component: {fileID: 1459741490}
   m_Layer: 0
   m_Name: purple_caves_floor_1 (40)
   m_TagString: Untagged
@@ -68955,23 +67809,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1459741490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1459741489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
 --- !u!212 &1459741491
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -69028,31 +67865,6 @@ Transform:
   m_Father: {fileID: 420728537}
   m_RootOrder: 248
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1459741493
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1459741489}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &1460831976
 GameObject:
   m_ObjectHideFlags: 0
@@ -70966,8 +69778,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1504181313}
   - component: {fileID: 1504181312}
-  - component: {fileID: 1504181314}
-  - component: {fileID: 1504181311}
   m_Layer: 0
   m_Name: purple_caves_floor_2 (41)
   m_TagString: Untagged
@@ -70975,23 +69785,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1504181311
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1504181310}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
 --- !u!212 &1504181312
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -71048,31 +69841,6 @@ Transform:
   m_Father: {fileID: 420728537}
   m_RootOrder: 251
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1504181314
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1504181310}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &1506804871
 GameObject:
   m_ObjectHideFlags: 0
@@ -74252,8 +73020,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1591110829}
   - component: {fileID: 1591110828}
-  - component: {fileID: 1591110830}
-  - component: {fileID: 1591110827}
   m_Layer: 0
   m_Name: purple_caves_floor_2 (38)
   m_TagString: Untagged
@@ -74261,23 +73027,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1591110827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1591110826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
 --- !u!212 &1591110828
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -74334,31 +73083,6 @@ Transform:
   m_Father: {fileID: 420728537}
   m_RootOrder: 239
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1591110830
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1591110826}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &1591900069
 GameObject:
   m_ObjectHideFlags: 0
@@ -79996,8 +78720,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1704609545}
   - component: {fileID: 1704609546}
-  - component: {fileID: 1704609548}
-  - component: {fileID: 1704609547}
   m_Layer: 0
   m_Name: purple_caves_floor_3 (140)
   m_TagString: Untagged
@@ -80061,48 +78783,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
---- !u!114 &1704609547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1704609544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
---- !u!61 &1704609548
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1704609544}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1001 &1705619138
 Prefab:
   m_ObjectHideFlags: 0
@@ -80869,8 +79549,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1714046949}
   - component: {fileID: 1714046950}
-  - component: {fileID: 1714046952}
-  - component: {fileID: 1714046951}
   m_Layer: 0
   m_Name: purple_caves_floor_2 (148)
   m_TagString: Untagged
@@ -80934,48 +79612,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
---- !u!114 &1714046951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1714046948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
---- !u!61 &1714046952
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1714046948}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &1715068130
 GameObject:
   m_ObjectHideFlags: 0
@@ -82866,8 +81502,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1760664846}
   - component: {fileID: 1760664847}
-  - component: {fileID: 1760664849}
-  - component: {fileID: 1760664848}
   m_Layer: 0
   m_Name: purple_caves_floor_3 (114)
   m_TagString: Untagged
@@ -82931,48 +81565,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
---- !u!114 &1760664848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1760664845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
---- !u!61 &1760664849
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1760664845}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &1761082153
 GameObject:
   m_ObjectHideFlags: 0
@@ -84285,8 +82877,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1777378908}
   - component: {fileID: 1777378909}
-  - component: {fileID: 1777378911}
-  - component: {fileID: 1777378910}
   m_Layer: 0
   m_Name: purple_caves_floor_3 (135)
   m_TagString: Untagged
@@ -84350,48 +82940,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
---- !u!114 &1777378910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1777378907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
---- !u!61 &1777378911
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1777378907}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &1781084749
 GameObject:
   m_ObjectHideFlags: 0
@@ -84545,8 +83093,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1783710648}
   - component: {fileID: 1783710647}
-  - component: {fileID: 1783710649}
-  - component: {fileID: 1783710646}
   m_Layer: 0
   m_Name: purple_caves_floor_2 (39)
   m_TagString: Untagged
@@ -84554,23 +83100,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1783710646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1783710645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
 --- !u!212 &1783710647
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -84627,31 +83156,6 @@ Transform:
   m_Father: {fileID: 420728537}
   m_RootOrder: 243
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1783710649
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1783710645}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &1784354811
 GameObject:
   m_ObjectHideFlags: 0
@@ -85083,8 +83587,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1788213412}
   - component: {fileID: 1788213413}
-  - component: {fileID: 1788213415}
-  - component: {fileID: 1788213414}
   m_Layer: 0
   m_Name: purple_caves_floor_4 (160)
   m_TagString: Untagged
@@ -85148,48 +83650,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
---- !u!114 &1788213414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1788213411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
---- !u!61 &1788213415
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1788213411}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &1788394718
 GameObject:
   m_ObjectHideFlags: 0
@@ -85273,8 +83733,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1790392157}
   - component: {fileID: 1790392158}
-  - component: {fileID: 1790392160}
-  - component: {fileID: 1790392159}
   m_Layer: 0
   m_Name: purple_caves_floor_3 (138)
   m_TagString: Untagged
@@ -85338,48 +83796,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
---- !u!114 &1790392159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1790392156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
---- !u!61 &1790392160
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1790392156}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &1791061328
 GameObject:
   m_ObjectHideFlags: 0
@@ -87046,8 +85462,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1822174855}
   - component: {fileID: 1822174856}
-  - component: {fileID: 1822174858}
-  - component: {fileID: 1822174857}
   m_Layer: 0
   m_Name: purple_caves_floor_2 (145)
   m_TagString: Untagged
@@ -87111,48 +85525,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
---- !u!114 &1822174857
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1822174854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
---- !u!61 &1822174858
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1822174854}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &1822590862
 GameObject:
   m_ObjectHideFlags: 0
@@ -90428,8 +88800,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1890134385}
   - component: {fileID: 1890134386}
-  - component: {fileID: 1890134388}
-  - component: {fileID: 1890134387}
   m_Layer: 0
   m_Name: purple_caves_floor_1 (107)
   m_TagString: Untagged
@@ -90493,48 +88863,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
---- !u!114 &1890134387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1890134384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
---- !u!61 &1890134388
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1890134384}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &1890323786
 GameObject:
   m_ObjectHideFlags: 0
@@ -95736,8 +94064,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2042750919}
   - component: {fileID: 2042750920}
-  - component: {fileID: 2042750922}
-  - component: {fileID: 2042750921}
   m_Layer: 0
   m_Name: purple_caves_floor_1 (108)
   m_TagString: Untagged
@@ -95801,48 +94127,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
---- !u!114 &2042750921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2042750918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
---- !u!61 &2042750922
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2042750918}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &2044704284
 GameObject:
   m_ObjectHideFlags: 0
@@ -98152,8 +96436,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2094225507}
   - component: {fileID: 2094225506}
-  - component: {fileID: 2094225508}
-  - component: {fileID: 2094225505}
   m_Layer: 0
   m_Name: purple_caves_floor_1 (41)
   m_TagString: Untagged
@@ -98161,23 +96443,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2094225505
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2094225504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dca8fd22c0e654d8b5f2e193f53cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cave: 0
-  comChance: 0
-  uncomChance: 0
-  epicChance: 0
-  encoChance: 0
-  bossStage: 0
 --- !u!212 &2094225506
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -98234,31 +96499,6 @@ Transform:
   m_Father: {fileID: 420728537}
   m_RootOrder: 252
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &2094225508
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2094225504}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &2098208346
 GameObject:
   m_ObjectHideFlags: 0
