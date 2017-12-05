@@ -118,27 +118,46 @@ public class BattleStateManager : MonoBehaviour
 				//pauses the game so that the player can see the end game message
 				bUI.lose.gameObject.SetActive(true);
 
-
-				gameObject.GetComponent<EventManager>().ExitBattle(); //lets player exit battle and walk around
+				StartCoroutine(ShowLoseText());
+				/*gameObject.GetComponent<EventManager>().ExitBattle(); //lets player exit battle and walk around
 				currentState = StatesOfBattle.Start; //resets the BattleState script
-				unitNum = 0; //resets chosen unit
+				unitNum = 0; //resets chosen unit*/
 				break;
 
 			case (StatesOfBattle.Win): //set up if player wins
 				Debug.Log("Yah, okay you won good job I guess");
-
+				bool i = true;
+				if (Input.GetKeyDown(KeyCode.Space))
+				{
+					i = false;
+				}
 				//pauses the game so that the player can see the end game message
-				bUI.win.gameObject.SetActive(true);
-				//while (!(Input.GetKeyDown(KeyCode.Space)))
-				//{
-
-				//}
-
-				gameObject.GetComponent<EventManager>().ExitBattle(); //lets player exit battle and walk around
+				bUI.win.gameObject.SetActive(i);
+				StartCoroutine(ShowWinText(i));
+				/*gameObject.GetComponent<EventManager>().ExitBattle(); //lets player exit battle and walk around
 				currentState = StatesOfBattle.Start; //resets the BattleState script
-				unitNum = 0; //resets chosen unit
+				unitNum = 0; //resets chosen unit*/
 				break;
 		}
+	}
+
+	IEnumerator ShowWinText(bool i)
+	{
+		bUI.win.gameObject.SetActive(true);
+		yield return new WaitForSeconds(3);
+		gameObject.GetComponent<EventManager>().ExitBattle(); //lets player exit battle and walk around
+		currentState = StatesOfBattle.Start; //resets the BattleState script
+		unitNum = 0; //resets chosen unit
+		bUI.win.gameObject.SetActive(false);
+	}
+	IEnumerator ShowLoseText()
+	{
+		bUI.lose.gameObject.SetActive(true);
+		yield return new WaitForSeconds(3);
+		gameObject.GetComponent<EventManager>().ExitBattle(); //lets player exit battle and walk around
+		currentState = StatesOfBattle.Start; //resets the BattleState script
+		unitNum = 0; //resets chosen unit
+		bUI.lose.gameObject.SetActive(false);
 	}
 
 	//was for changeing states have not finished it
