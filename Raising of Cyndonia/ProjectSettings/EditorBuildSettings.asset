@@ -12,5 +12,8 @@ EditorBuildSettings:
     path: Assets/Tunnel.unity
     guid: 59f580e3134ffa348b68112fe08c9aef
   - enabled: 1
+    path: Assets/BossStage.unity
+    guid: 1c902d27a11be5d449f1dcc87072c647
+  - enabled: 0
     path: Assets/Main.unity
     guid: 6e4be912ce8de9746aaf783b6bcce57b
