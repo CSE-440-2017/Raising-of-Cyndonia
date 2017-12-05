@@ -122,6 +122,7 @@ public class EventManager : MonoBehaviour
 		audio.Pause();
 		audio.clip = End;
 		audio.PlayDelayed(0.05f);
+		audio.loop = false;
 	}
 
 	public void RemoveEnemy(GameObject enemy)
