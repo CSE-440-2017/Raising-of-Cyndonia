@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Forest.unity
     guid: e123e06fd3d442244ab99760d54c4132
   - enabled: 1
+    path: Assets/Trying Something.unity
+    guid: bdee5806017f22049be4d48cb4259649
+  - enabled: 0
     path: Assets/Credit.unity
     guid: fbb8b6586adafe24a845c71262d6af51
   - enabled: 0
