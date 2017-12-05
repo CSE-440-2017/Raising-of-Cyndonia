@@ -5,7 +5,7 @@ using UnityEngine;
 public class BattleStateManager : MonoBehaviour 
 {
 	public StatesOfBattle currentState; //state of the battle
-	public GameObject player, enemy, playerUnit, enemyUnit; //player, enemy, and the party of player and enemy game objects
+	public GameObject player, enemy, playerUnit, enemyUnit, battleCamera; //player, enemy, and the party of player and enemy game objects
 	//not sure we will be using these yet
 	//public PlayerParty playerUnit; 
 	//public EnemyParty enemyUnit;

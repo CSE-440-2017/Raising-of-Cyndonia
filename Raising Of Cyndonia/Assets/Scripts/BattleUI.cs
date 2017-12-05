@@ -10,7 +10,7 @@ public class BattleUI : MonoBehaviour
 	public GameObject choices, skills, invent, party, descrip, target; //different panels
 	public GameObject targetChoice; //The choice for the target to attack
 	//public Text attack, skill, inventory, escape, skill1, skill2, skill3, skill4; //different text
-	public Text win, lose;
+	public Text win, lose, descripe;
 	public Text[] partyName, targetName;
 	public int curChoice, targetUnit; //input key for choosing
 	public BattleStateManager BSM;

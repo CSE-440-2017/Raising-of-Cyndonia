@@ -222,6 +222,7 @@ MonoBehaviour:
   targetChoice: {fileID: 0}
   win: {fileID: 802047984}
   lose: {fileID: 1202283252}
+  descripe: {fileID: 2084147439}
   partyName:
   - {fileID: 11131863}
   - {fileID: 715307805}
@@ -14606,7 +14607,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -207.95892, y: 188.22758}
+  m_AnchoredPosition: {x: -207.95892, y: 188.22757}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &326914381
@@ -28305,6 +28306,11 @@ Prefab:
       propertyPath: m_Name
       value: Blue Goblin
       objectReference: {fileID: 0}
+    - target: {fileID: 114120151628451658, guid: 7deac47600fac4d4da01aacbe3a8baa3,
+        type: 2}
+      propertyPath: EM
+      value: 
+      objectReference: {fileID: 984693226}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7deac47600fac4d4da01aacbe3a8baa3, type: 2}
   m_IsPrefabParent: 0
@@ -44277,6 +44283,7 @@ MonoBehaviour:
   whichEnemy: 0
   name: 
   encounteredEnemies: []
+  bUI: {fileID: 0}
   isBoss: 0
   enemyBPosition:
   - {fileID: 1132307279}
@@ -44317,6 +44324,7 @@ MonoBehaviour:
   enemy: {fileID: 0}
   playerUnit: {fileID: 0}
   enemyUnit: {fileID: 0}
+  battleCamera: {fileID: 0}
   unitNum: 0
   bUI: {fileID: 1340881}
 --- !u!82 &984693229
@@ -49152,6 +49160,11 @@ Prefab:
       propertyPath: name
       value: HK The Big Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 114374571963750300, guid: 4130ee5cadd1b574da933a12bd84d49f,
+        type: 2}
+      propertyPath: EM
+      value: 
+      objectReference: {fileID: 984693226}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4130ee5cadd1b574da933a12bd84d49f, type: 2}
   m_IsPrefabParent: 0
@@ -58382,7 +58395,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -207.95892, y: 188.22758}
+  m_AnchoredPosition: {x: -207.95892, y: 188.22757}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1274102916
@@ -59005,7 +59018,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -207.95892, y: 188.22758}
+  m_AnchoredPosition: {x: -207.95892, y: 188.22757}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1284422653
@@ -66623,6 +66636,11 @@ Prefab:
       propertyPath: name
       value: Raigoth The Faceless
       objectReference: {fileID: 0}
+    - target: {fileID: 114490408243494714, guid: a375ffcad4ba2bc4d9efb8846c1a3a89,
+        type: 2}
+      propertyPath: EM
+      value: 
+      objectReference: {fileID: 984693226}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a375ffcad4ba2bc4d9efb8846c1a3a89, type: 2}
   m_IsPrefabParent: 0
@@ -75391,6 +75409,11 @@ Prefab:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 2084573244}
+    - target: {fileID: 114969773308775866, guid: a112c162dd516b442a29394863c1135d,
+        type: 2}
+      propertyPath: EM
+      value: 
+      objectReference: {fileID: 984693226}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a112c162dd516b442a29394863c1135d, type: 2}
   m_IsPrefabParent: 0
@@ -78468,6 +78491,11 @@ Prefab:
       propertyPath: m_Name
       value: Purple Goblin
       objectReference: {fileID: 0}
+    - target: {fileID: 114894668498056548, guid: 38fca18e48507da489f448e29d535ee5,
+        type: 2}
+      propertyPath: EM
+      value: 
+      objectReference: {fileID: 984693226}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 38fca18e48507da489f448e29d535ee5, type: 2}
   m_IsPrefabParent: 0
@@ -78826,6 +78854,11 @@ Prefab:
       propertyPath: m_Name
       value: Green Goblin
       objectReference: {fileID: 0}
+    - target: {fileID: 114530898951949538, guid: 37196fc26737553498b943e505fbdb7b,
+        type: 2}
+      propertyPath: EM
+      value: 
+      objectReference: {fileID: 984693226}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37196fc26737553498b943e505fbdb7b, type: 2}
   m_IsPrefabParent: 0
@@ -91070,6 +91103,11 @@ Prefab:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 212235082}
+    - target: {fileID: 114203204329368806, guid: 064588e42a2ee804199464ef8cf23a48,
+        type: 2}
+      propertyPath: EM
+      value: 
+      objectReference: {fileID: 984693226}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 064588e42a2ee804199464ef8cf23a48, type: 2}
   m_IsPrefabParent: 0

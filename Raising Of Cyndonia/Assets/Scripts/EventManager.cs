@@ -12,7 +12,7 @@ public class EventManager : MonoBehaviour
 	//public List<SkillsComponent> allSkills = new List<SkillsComponent>(); //creates a list of skills
 	//public GameObject tempEnt, 
 	public List<GameObject> encounteredEnemies = new List<GameObject>(); //temp game object was using to switch goblins and mess with
-	BattleUI bUI; //battle UI
+	public BattleUI bUI; //battle UI
 	[SerializeField] bool isBoss;
 	AudioSource audio;
 
