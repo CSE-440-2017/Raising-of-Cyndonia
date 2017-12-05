@@ -94,8 +94,10 @@ public class AttackComponent : MonoBehaviour {
 			totalDMG = (int)baseDMG - (int)updatedDMG;//Subtracts the base damage with the updated damge to give proper damage value
 			//Debug.Log("total dmg " + totalDMG);
 			Debug.Log(other);
-			EM.GetComponent<EventManager>().battleCamera.GetComponent<BattleUI>().descripe.text = gameObject.GetComponent<Entity>().Name + " attacked " + other.GetComponent<Entity>().Name + " for " + totalDMG + " damage!";
-
+			if(gameObject.GetComponent<Entity>().IsPlayer)
+			{
+				EM.GetComponent<EventManager>().battleCamera.GetComponent<BattleUI>().descripe.text = gameObject.GetComponent<Entity>().Name + " attacked " + other.GetComponent<Entity>().Name + " for " + totalDMG + " damage!";
+			}
 			other.GetComponent<HealthComponent>().HealthDamaged (totalDMG);
 
 		} 
