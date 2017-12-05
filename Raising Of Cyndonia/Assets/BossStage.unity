@@ -49768,6 +49768,11 @@ Prefab:
       propertyPath: m_Name
       value: Troll
       objectReference: {fileID: 0}
+    - target: {fileID: 114889112070692932, guid: 4130ee5cadd1b574da933a12bd84d49f,
+        type: 2}
+      propertyPath: name
+      value: HK The Big Boss
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4130ee5cadd1b574da933a12bd84d49f, type: 2}
   m_IsPrefabParent: 0
